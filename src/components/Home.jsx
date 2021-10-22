@@ -7,7 +7,7 @@ const Home = () => {
             <img></img>
             <h1>Guía de cumplimiento de Estándar SDDC</h1>
             <img></img>
-            <Link to="/menu">
+            <Link to="/identification">
             Ingresar </Link>
             
         </div>

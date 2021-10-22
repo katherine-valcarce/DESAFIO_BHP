@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Menu from "./components/Menu";
+import Doc from "./components/Doc";
+import Identification from "./components/Identification";
 import Calculator from "./components/Calculator";
 import Checklist from "./components/Checklist";
 import './App.css';
@@ -14,6 +16,9 @@ const App = () => {
     const [space, setSpace] = useState('');
     const [informationELC, setInformationELC] = useState('');
     const [checkList, setCheckList] = useState(false);
+    const [user, setUser] = useState('');
+    console.log(user)
+    const [position, setPosition] = useState('');
 
 const onChangeinformationELC = (LongitudEstrobo, EstaturaTrabajador, EspacioRealDeTerreno) => {
    const EA = 1.2;
@@ -35,6 +40,13 @@ return (
     <Switch>
       <Route path="/" exact={true}>
         <Home />
+      </Route>
+      <Route path="/identification">
+        <Identification
+        user={user}
+        setUser={setUser}
+        position={position}
+        setPosition={setPosition} />
       </Route>
       <Route path="/menu">
         <Menu/>
@@ -64,6 +76,12 @@ return (
         informationELC={informationELC}
         onChangeinformationELC={onChangeinformationELC}
         checkList={checkList}
+        />
+      </Route>
+      <Route path="/doc">
+        <Doc 
+        user={user}
+        position={position}
         />
       </Route>
     </Switch>

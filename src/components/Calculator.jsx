@@ -17,10 +17,6 @@ const Calculator = ({estrobo, setEstrobo, height, setHeight, space, setSpace, on
         setEstrobo(event.target.value);
     }
 
-    parseFloat()
-
-
-
     return (
         <div>
             <h1>BHP</h1>
