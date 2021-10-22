@@ -10,11 +10,8 @@ import Results from './components/Results';
 const App = () => {
 
   const [estrobo, setEstrobo] = useState('1.2');
-    console.log(estrobo);
     const [height, setHeight] = useState('');
-    console.log(height);
     const [space, setSpace] = useState('');
-    console.log(space);
     const [informationELC, setInformationELC] = useState('');
     const [checkList, setCheckList] = useState(false);
 
