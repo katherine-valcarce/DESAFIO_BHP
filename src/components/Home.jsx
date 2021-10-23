@@ -9,7 +9,7 @@ const Home = () => {
             <div className="row">
                 <div className ="col">
             <img src={logo} alt="logo"/> 
-            <h1>Guía de cumplimiento de Estándar SDDC</h1>
+            <h1 className='titleHome'>Guía de cumplimiento de Estándar SDDC</h1>
             <img src={warning}></img> <br/>
             <Link to="/identification"><button className=" btn btn-primary">
             Ingresar</button></Link>

@@ -1,0 +1,11 @@
+@import url("//db.onlinewebfonts.com/c/105007d99d9df64c50cc24d696d79555?family=Graphik+Web+Regular");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+.titleHome{
+    font-family: 'Graphik Web Regular';
+    font-weight: 900;
+    text-align: center;
+}
+.btn-primary{
+    font-family: 'Roboto', sans-serif;
+}
