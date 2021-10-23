@@ -1,23 +1,56 @@
 import React, {useState} from 'react'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
+import UserInformation from './components/UserInformation';
 import Menu from "./components/Menu";
 import Calculator from "./components/Calculator";
-import Checklist from "./components/Checklist";
-import './App.css';
+import AnchorPointVerification from './components/AnchorPointVerification';
+import CheckList from "./components/CheckList";
+import CheckList2 from './components/CheckList2';
+import CheckList3 from './components/CheckList3';
+import CheckList4 from './components/CheckList4';
 import Results from './components/Results';
+import './App.css';
+
+
 
 const App = () => {
 
-  const [estrobo, setEstrobo] = useState('1.2');
-    console.log(estrobo);
-    const [height, setHeight] = useState('');
-    console.log(height);
-    const [space, setSpace] = useState('');
-    console.log(space);
-    const [informationELC, setInformationELC] = useState('');
-    const [checkList, setCheckList] = useState(false);
+/* ---------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
+  const estadoDelArnes = [
+   {id:1, pregunta:'¿Pregunta N°1?'},
+   {id:2, pregunta:'¿Pregunta N°2?'},
+   {id:3, pregunta:'¿Pregunta N°3?'},
+   {id:4, pregunta:'¿Pregunta N°4?'}, 
+   {id:5, pregunta:'¿Pregunta N°5?'},
+   {id:6, pregunta:'¿Pregunta N°6?'},
+   {id:7, pregunta:'¿Pregunta N°7?'}
+  ];
 
+  const [arnesCondition, setArnesCondition] = useState([{id:1, pregunta:'¿Pregunta N°1?'}]);
+  
+  
+
+/*---------Función que agrega las condiciones de validación de punto de anclaje---------------- */
+ const  additionOfhArnesConditions = (id) => {
+  const copyOfArnesConditions = [...arnesCondition];
+  if( id === 7){
+    setArnesCondition(copyOfArnesConditions);
+  }else{
+    copyOfArnesConditions.push(estadoDelArnes[id]);
+    setArnesCondition(copyOfArnesConditions);
+      
+      }
+ }
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+  const [estrobo, setEstrobo] = useState('1.2');
+  const [height, setHeight] = useState('');
+  const [space, setSpace] = useState('');
+  const [informationELC, setInformationELC] = useState('');
+
+/*-------------------------------- Calculadora ----------------------------------*/
 const onChangeinformationELC = (LongitudEstrobo, EstaturaTrabajador, EspacioRealDeTerreno) => {
    const EA = 1.2;
    const MS = 1;
@@ -31,16 +64,22 @@ const onChangeinformationELC = (LongitudEstrobo, EstaturaTrabajador, EspacioReal
    return ELC;
 
 }
-
-
+/* --------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
 return (
   <Router>
     <Switch>
       <Route path="/" exact={true}>
-        <Home />
+        <Home/>
+      </Route>
+      <Route path="/user">
+        <UserInformation/>
       </Route>
       <Route path="/menu">
         <Menu/>
+      </Route>
+      <Route path="/verification">
+        <AnchorPointVerification/>
       </Route>
       <Route path="/calculator">
         <Calculator
@@ -54,10 +93,19 @@ return (
        />
       </Route>
       <Route path="/checklist">
-        <Checklist
-        checkList={checkList}
-        setCheckList={setCheckList}
+        <CheckList 
+        arnesCondition={arnesCondition}
+        additionOfhArnesConditions={additionOfhArnesConditions}
         />
+      </Route>
+      <Route path="/checklist2">
+        <CheckList2/>
+      </Route>
+      <Route path="/checklist3">
+        <CheckList3/>
+      </Route>
+      <Route path="/checklist4">
+        <CheckList4/>
       </Route>
       <Route path="/results">
         <Results 
@@ -66,7 +114,7 @@ return (
         space={space}
         informationELC={informationELC}
         onChangeinformationELC={onChangeinformationELC}
-        checkList={checkList}
+        
         />
       </Route>
     </Switch>
@@ -75,3 +123,4 @@ return (
 };
 
 export default App;
+
