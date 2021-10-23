@@ -1,16 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import logo from "../asset/logo.png"
+import warning from "../asset/warning.png"
 
 const Home = () => {
     return (
-        <div>
-            <img></img>
+        <div className="container">
+            <div className="row">
+                <div className ="col">
+            <img src={logo} alt="logo"/> 
             <h1>Guía de cumplimiento de Estándar SDDC</h1>
-            <img></img>
-            <Link to="/identification">
-            Ingresar </Link>
-            
+            <img src={warning}></img> <br/>
+            <Link to="/identification"><button className=" btn btn-primary">
+            Ingresar</button></Link>
+            </div>
+            </div>
         </div>
     )
 }
-export default Home;
+export default Home; 
