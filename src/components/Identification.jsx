@@ -31,7 +31,6 @@ const identification = (props) => {
                      onChange= {(e) => setPosition(e.target.value)}
                      placeholder='Cargo'
                     />
-                    <Link to='/Doc'><button type='submit'>Enviar (borrar) </button> </Link>
                 </div>
                 
                 <br/>

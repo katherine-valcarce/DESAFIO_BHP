@@ -16,6 +16,7 @@ const Results = ({estrobo, height, space, informationELC, onChangeinformationELC
                    onChangeinformationELC={onChangeinformationELC}
                  />
                  <ResultsCheckList/>
+                 <Link to='/Doc'><button type='submit'> Previsualizar PDF </button> </Link>
             </div>
              :
              informationELC === 'Estarás a salvo' && checkList === false ?
@@ -56,6 +57,7 @@ const Results = ({estrobo, height, space, informationELC, onChangeinformationELC
              :
              null
         }
+        
         </div>
     )
 }
