@@ -3,7 +3,9 @@ import Pregunta1 from "../asset/checklist/Pregunta1.png"
 import Pregunta2 from "../asset/checklist/Pregunta2.png"
 import Pregunta3 from "../asset/checklist/Pregunta3.png"
 import Pregunta4 from "../asset/checklist/Pregunta4.png"
-import monitoescalada from "../asset/monitoescalada.png"
+import monitoescalada from "../asset/grafic.png"
+import { jsPDF } from "jspdf";
+import html2canvas from 'html2canvas'
 
 const Doc = (props) => {
     const {user, position} = props;
@@ -21,7 +23,7 @@ const Doc = (props) => {
       }
 
     return (
-        <div>           
+      <div id='divToPrint'>          
             <h1> Nombre de usuario : {user} </h1>
             <h1> Nombre de cargo : {position} </h1>
             <h1> Fecha y hora de emisión :  </h1>
@@ -53,6 +55,7 @@ const Doc = (props) => {
             <h1> {position} </h1>
             </div>
         </div>
+          <button onClick={printDocument}>Descargar PDF</button>
         </div>
         
     )
