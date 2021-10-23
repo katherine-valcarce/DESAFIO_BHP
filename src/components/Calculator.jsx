@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from "react-router-dom";
+import logo from "../asset/logo.png"
 
 const Calculator = ({estrobo, setEstrobo, height, setHeight, space, setSpace, onChangeinformationELC}) => {
 
@@ -19,7 +20,7 @@ const Calculator = ({estrobo, setEstrobo, height, setHeight, space, setSpace, on
 
     return (
         <div>
-            <h1>BHP</h1>
+            <img src={logo} alt="logo" />
             <h2>Cálculo de Espacio Libre de Caída</h2>
             <h5>Ingrese los datos solicitados</h5>
             <form action="">
@@ -42,11 +43,11 @@ const Calculator = ({estrobo, setEstrobo, height, setHeight, space, setSpace, on
                 <div>
                     <label htmlFor="estatura">Estatura del trabajador:</label>
                     <input 
-                     type="text"
-                     name="estatura"
-                     id="estatura"
-                     value={height}
-                     onChange={onChangeHeight}
+                    type="text"
+                    name="estatura"
+                    id="estatura"
+                    value={height}
+                    onChange={onChangeHeight}
                     />
                 </div>
                 <br/>
@@ -64,17 +65,14 @@ const Calculator = ({estrobo, setEstrobo, height, setHeight, space, setSpace, on
                 <br/>
                 <Link to='/results'>
                 <button
-                 type="submit"
-                 onClick={() => onChangeinformationELC(estrobo,height,space) }
-                 >
+                type="submit"
+                onClick={() => onChangeinformationELC(estrobo,height,space) }
+                >
                 Continuar
-                 </button>
-                 </Link>
+                </button>
+                </Link>
             </form>
         </div>
     )
 }
 export default Calculator;
-
-
-                  
