@@ -1,0 +1,101 @@
+{
+  "Harness": [
+    {
+      "id": 1,
+      "pregunta": "¿Se encuentra libre grasa, pinturas, etc?"
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Tiene hebras cortadas o dañadas?"
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Presenta costuras deshilachadas?"
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Posee la placa de identificación?"
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Se encontraba correctamente almacenado?"
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Presenta cortes o desgarros?"
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Posee el tag de inspección CESMEC?"
+    }
+  ],
+
+  "accesories": [
+    {
+      "id": 8,
+      "pregunta": "¿Los anillos en D presentan deformaciones?"
+    },
+    {
+      "id": 9,
+      "pregunta": "¿Están las hebillas en buen estado?"
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Mantiene los elementos plásticos?"
+    },
+    {
+      "id": 11,
+      "pregunta": "¿Los elementos plásticos están en buen estado?"
+    }
+  ],
+
+  "lifeRope": [
+    {
+      "id": 12,
+      "pregunta": "¿Se encuentran libres de grasa, pintura, etc?"
+    },
+    {
+      "id": 13,
+      "pregunta": "¿Están los ganchos en buen estado?"
+    },
+    {
+      "id": 14,
+      "pregunta": "¿Presenta cortes en sus hebras?"
+    },
+    {
+      "id": 15,
+      "pregunta": "¿Presenta costuras deshilachadas?"
+    }
+  ],
+
+  "anchorage": [
+    {
+      "id": 1,
+      "pregunta": "¿Se visualiza alguna modificación del Punto de Anclaje?"
+    },
+    {
+      "id": 2,
+      "pregunta": "¿El Punto de Anclaje a utilizar está identificado de color amarillo?"
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Se encuentra accesible el Punto de Anclaje a utilizar?"
+    },
+    {
+      "id": 4,
+      "pregunta": " ¿Existe deformación en alguno de los componentes (argolla, placa, perno, etc)?"
+    },
+    {
+      "id": 5,
+      "pregunta": " ¿Se encuentra instalada la Placa Identificadora que muestra el código, capacidad y estado de aprobación?"
+    },
+    {
+      "id": 6,
+      "pregunta": " ¿Esta placa cuenta con la fecha de validación, tipo y fijación del anclaje?"
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Se aprecian fisuras o golpes en el Punto de Anclaje?"
+    }
+  ]
+}
