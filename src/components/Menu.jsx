@@ -1,21 +1,25 @@
 import React from 'react'
 import {Link} from "react-router-dom";
-import logo from "../asset/logo.png"
+import logo from "../asset/bhp-logo 2.png"
 
 const Menu = ({setArnesCondition}) => {
     return (
-        <div>
-            <img src={logo} alt="logo"></img> <br/>
+        <div className = "containerDiv">
+            <img className = "logo" src={logo} alt="logo"></img> 
+            <div className= "bodyContainerMenu">
                <Link to='/calculator'>
-                <div><button>Calculadora de ELC</button></div>
+                <div>
+                    <button className= "btn-primary btnMenu">Calculadora de ELC</button></div>              
             </Link>
+          
             <Link to='/verification'>
-                <div><button  
+                <div><button className= "btn-primary btnMenu" 
                 onClick={() => setArnesCondition([{id:1, pregunta:'¿Pregunta N°1?', respuesta:'si'}])}>
                 Verificación de Arnés y punto de Anclaje</button>
                 </div>
             </Link>
-        </div>
+            </div>
+            </div>
     )
 }
 export default Menu;
