@@ -24,10 +24,11 @@ const [position, setPosition] = useState('');
   
 
   const [arnesCondition, setArnesCondition] = useState([{id:1, pregunta:'¿Pregunta N°1?', respuesta:'si'}]);
+  const [lifeRopeCondition, setLifeRopeCondition] = useState([{id:1, pregunta:'¿Pregunta N°1?', respuesta:'no'}]);
   console.log(arnesCondition);
   
 
-/*---------Función que agrega las condiciones de validación de punto de anclaje---------------- */
+/*---------Funciónes que agregan las condiciones de validación de punto de anclaje---------------- */
  const  additionOfArnesConditions = (id, data) => {
   const copyOfArnesConditions = [...arnesCondition];
 
@@ -38,6 +39,20 @@ const [position, setPosition] = useState('');
   }else{
     copyOfArnesConditions.push(data[id]);
     setArnesCondition(copyOfArnesConditions);
+      
+      }
+ }
+
+ const  additionOfLifeRopeConditions = (id, data) => {
+  const copyOfLifeRopeConditions = [...lifeRopeCondition];
+
+  if(copyOfLifeRopeConditions.filter((item)=>{return item.id === id+1}).length>0){
+       return;
+  }else if( id === data.length){
+    setLifeRopeCondition(copyOfLifeRopeConditions);
+  }else{
+    copyOfLifeRopeConditions.push(data[id]);
+    setLifeRopeCondition(copyOfLifeRopeConditions);
       
       }
  }
@@ -108,7 +123,11 @@ return (
         <CheckList3/>
       </Route>
       <Route path="/checklist4">
-        <CheckList4/>
+        <CheckList4
+        lifeRopeCondition={lifeRopeCondition}
+        setLifeRopeCondition={setLifeRopeCondition}
+        additionOfLifeRopeConditions={additionOfLifeRopeConditions}
+        />
       </Route>
       <Route path="/results">
         <Results 
