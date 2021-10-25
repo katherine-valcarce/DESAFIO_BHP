@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from "react-router-dom";
-import logo from "../asset/logo.png"
+import logo from "../asset/bhp-logo 2.png"
 
 const Calculator = ({estrobo, setEstrobo, height, setHeight, space, setSpace, onChangeinformationELC}) => {
 
@@ -19,11 +19,14 @@ const Calculator = ({estrobo, setEstrobo, height, setHeight, space, setSpace, on
     }
 
     return (
-        <div>
-            <img src={logo} alt="logo" />
-            <h2>Cálculo de Espacio Libre de Caída</h2>
-            <h5>Ingrese los datos solicitados</h5>
-            <form action="">
+        <div className="container">
+            <img className = "logo" src={logo} alt="logo" />
+            <div className= "bodyContainerCalculator">
+                <div className = "calculatorTitle">
+            <h1>Cálculo de Espacio Libre de Caída</h1>
+            <h2>Ingrese los datos solicitados</h2>
+            </div>
+            <form className ="calculatorForm" action="">
                 <div>
                     <label htmlFor="estrobo">Longitud del Estrobo:</label>
                     <select 
@@ -39,7 +42,6 @@ const Calculator = ({estrobo, setEstrobo, height, setHeight, space, setSpace, on
                     </select>
                     
                 </div>
-                <br/>
                 <div>
                     <label htmlFor="estatura">Estatura del trabajador:</label>
                     <input 
@@ -50,7 +52,14 @@ const Calculator = ({estrobo, setEstrobo, height, setHeight, space, setSpace, on
                     onChange={onChangeHeight}
                     />
                 </div>
-                <br/>
+                <div> 
+                    <div>
+                    Elongación del Amortiguador de Impacto <p>(según NCh 1258/2; para Tipo 1:1.2m)</p>
+                    </div>
+                    <div>
+                    Márgen de Seguridad <p>(según NCh1258/6 mayor o igual a 1m</p>
+                    </div>
+                    </div>
                 <div>
                     <label htmlFor="espacioReal">Espacio real de terreno:</label>
                     <input 
@@ -62,16 +71,20 @@ const Calculator = ({estrobo, setEstrobo, height, setHeight, space, setSpace, on
                     
                     />
                 </div>
-                <br/>
-                <Link to='/results'>
+              
+            </form>
+            <div>
+            <Link to='/results'>
                 <button
+                className= "btn-primary btn"
                 type="submit"
                 onClick={() => onChangeinformationELC(estrobo,height,space) }
                 >
-                Continuar
+                RESULTADO
                 </button>
                 </Link>
-            </form>
+            </div>
+        </div>
         </div>
     )
 }

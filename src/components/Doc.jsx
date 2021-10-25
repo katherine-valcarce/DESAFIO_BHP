@@ -16,7 +16,7 @@ const Doc = (props) => {
           .then((canvas) => {
             const imgData = canvas.toDataURL('image/png');
             const pdf = new jsPDF();
-            pdf.addImage(imgData, 'JPEG', 0, 0);
+            pdf.addImage(imgData, 'JPEG', 15, 15, 220, 280);
             pdf.save("download.pdf");
           })
         ;
@@ -34,6 +34,7 @@ const Doc = (props) => {
             <img src= {Pregunta3} alt= "pregunta3"></img>
             <img src= {Pregunta4} alt= "pregunta4"></img>
         <div>
+          <pagebreak/>
             <h1>CALCULO DE ESPACIO LIBRE DE CAÍDA</h1>
             <div>
                 <div>

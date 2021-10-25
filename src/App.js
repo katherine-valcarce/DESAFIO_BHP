@@ -6,7 +6,7 @@ import Doc from "./components/Doc";
 import Identification from "./components/Identification";
 import Calculator from "./components/Calculator";
 import AnchorPointVerification from './components/AnchorPointVerification';
-import CheckList from "./components/CheckList";
+import CheckList from "./components/Checklist.jsx";
 import CheckList2 from './components/CheckList2';
 import CheckList3 from './components/CheckList3';
 import CheckList4 from './components/CheckList4';
