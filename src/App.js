@@ -21,27 +21,22 @@ const [user, setUser] = useState('');
 const [position, setPosition] = useState('');
 /* ---------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------- */
-  const estadoDelArnes = [
-   {id:1, pregunta:'¿Pregunta N°1?'},
-   {id:2, pregunta:'¿Pregunta N°2?'},
-   {id:3, pregunta:'¿Pregunta N°3?'},
-   {id:4, pregunta:'¿Pregunta N°4?'}, 
-   {id:5, pregunta:'¿Pregunta N°5?'},
-   {id:6, pregunta:'¿Pregunta N°6?'},
-   {id:7, pregunta:'¿Pregunta N°7?'}
-  ];
-
-  const [arnesCondition, setArnesCondition] = useState([{id:1, pregunta:'¿Pregunta N°1?'}]);
   
+
+  const [arnesCondition, setArnesCondition] = useState([{id:1, pregunta:'¿Pregunta N°1?', respuesta:'si'}]);
+  console.log(arnesCondition);
   
 
 /*---------Función que agrega las condiciones de validación de punto de anclaje---------------- */
- const  additionOfhArnesConditions = (id) => {
+ const  additionOfArnesConditions = (id, data) => {
   const copyOfArnesConditions = [...arnesCondition];
-  if( id === 7){
+
+  if(copyOfArnesConditions.filter((item)=>{return item.id === id+1}).length>0){
+       return;
+  }else if( id === data.length){
     setArnesCondition(copyOfArnesConditions);
   }else{
-    copyOfArnesConditions.push(estadoDelArnes[id]);
+    copyOfArnesConditions.push(data[id]);
     setArnesCondition(copyOfArnesConditions);
       
       }
@@ -83,7 +78,7 @@ return (
         setPosition={setPosition} />
       </Route>
       <Route path="/menu">
-        <Menu/>
+        <Menu setArnesCondition={setArnesCondition}/>
       </Route>
       <Route path="/verification">
         <AnchorPointVerification/>
@@ -102,7 +97,8 @@ return (
       <Route path="/checklist">
         <CheckList 
         arnesCondition={arnesCondition}
-        additionOfhArnesConditions={additionOfhArnesConditions}
+        setArnesCondition={setArnesCondition}
+        additionOfArnesConditions={additionOfArnesConditions}
         />
       </Route>
       <Route path="/checklist2">

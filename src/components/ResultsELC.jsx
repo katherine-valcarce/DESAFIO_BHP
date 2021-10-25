@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ResultsELC = ({estrobo,height,space,informationELC, onChangeinformationELC}) => {
+const ResultsELC = ({estrobo,height,space,informationELC,onChangeinformationELC}) => {
     return (
       <div>
         <h2>{informationELC}</h2>
@@ -17,7 +17,7 @@ const ResultsELC = ({estrobo,height,space,informationELC, onChangeinformationELC
         <h3>Margen de seguridad en metros: 1</h3>
         <h3>Elongación del amortiguador de impacto tipo 1 en metros: 1.2</h3>
       </div>
-    );
+    )
 }
 
 export default ResultsELC
