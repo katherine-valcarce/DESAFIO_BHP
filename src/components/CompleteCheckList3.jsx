@@ -30,7 +30,9 @@ const CompleteCheckList3 = ({additionOfLifeRopeConditions, lifeRopeCondition}) =
                     
                 }
             </ol>
-            <Link to='/checklist4'><button>Continuar</button></Link>
+            <div className="continueBtnDiv">
+            <Link to='/checklist4'><button className= "continueBtn">CONTINUAR</button></Link>
+        </div>
         </div>
     )
 }

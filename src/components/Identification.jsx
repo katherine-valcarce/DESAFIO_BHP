@@ -11,7 +11,7 @@ const identification = (props) => {
             <div className="bodyContainer">
                 <h1 className='titleHome'> Identificación de Usuario </h1>
                 <img src={casco} alt="casco"></img>
-                <form action="/Menu">
+                <form className = "formIdentification" action="/Menu">
                     <div className="inputDiv">
 
                         <input

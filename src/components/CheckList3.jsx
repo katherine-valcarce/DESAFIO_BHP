@@ -1,6 +1,7 @@
 import React from 'react'
 import CompleteCheckList3 from './CompleteCheckList3';
 import LifeRopeCondition from './LifeRopeCondition';
+import logo from "../asset/bhp-logo 2.png"
 
 const CheckList3 = ({lifeRopeCondition, additionOfLifeRopeConditions}) => {
     const estadoDeCuerdaDeVida = [
@@ -13,11 +14,13 @@ const CheckList3 = ({lifeRopeCondition, additionOfLifeRopeConditions}) => {
     
     
     return (
-        <div>
-            <h2>Verifica si el punto de anclaje cuenta con los siguientes requisitos:</h2>
-            <br />
-            <h4>Estado de la cuerda de vida</h4>
-            <br/>
+        <div className="containerDiv">
+        <img className= "logo" src={logo} alt="logo"></img>
+        <div className= "checklistDiv">
+        <h2 className= "h2Verif">VERIFICA SI EL PUNTO DE ANCLAJE CUENTA CON LOS SIGUIENTES REQUISITOS:</h2>
+        <div className="boxDivChecklist">
+        <h2 className= "h2Verif">ESTADO DE LA CUERDA DE VIDA</h2>
+            
             <ol> { lifeRopeCondition.length < 5 ?
                 lifeRopeCondition.map((condition) => {
                     return(
@@ -38,6 +41,9 @@ const CheckList3 = ({lifeRopeCondition, additionOfLifeRopeConditions}) => {
                 }
             </ol>
         </div>
+        </div>
+        </div>
+    
     )
 }
 export default CheckList3;

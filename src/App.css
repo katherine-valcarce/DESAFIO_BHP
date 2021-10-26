@@ -85,6 +85,14 @@
 .form-check-input{
     margin-top: 0em;
 }
+.formIdentification{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    height: 38vh;
+}
 /* ------Menu-------- */
 
 .bodyContainerMenu{
