@@ -115,8 +115,51 @@
 
 }
 /* -------Calculator------- */
+h2{
+    font-family: Graphik;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000; 
+}
+.inputCalculator{
+    width: 10vh;
+    height: 5vh;
+    border: 1px solid #DD5900;
+    border-radius: 3px;
+}
+.inputCalculatorWithoutBorder{
+    width: 10vh;
+    height: 5vh;
 
-.bodyContainerCalculator{
+    
+}
+.calculatorFont{
+    font-size: 13px;
+    
+}
+.boxDivCalculator{
+    border: 1px solid #F7F4F4;
+    background: #F7F4F4;
+    height: 70vh;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 25%), 0 4px 11px 8px rgb(0 0 0 / 0%);
+    border-radius: 5px;
+    padding: 0.75rem;
+    padding-top: 2rem;
+}
+.calculatorbtn{
+    width: 25vh;
+    height: 7vh;
+    margin: 2vh;
+}
+.divBtnCalculator{
+    display: flex;
+    justify-content: center;
+}
+.row{
+    margin-bottom: 2vh;
+}
+/* .bodyContainerCalculator{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -164,7 +207,7 @@ h2{
     align-items: flex-start;
     flex-wrap: nowrap;
     justify-content: space-around;
-}
+} */
 
 /* -------Anchor Point Verification----------- */
 
