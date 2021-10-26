@@ -1,6 +1,7 @@
 import React from 'react'
 import ArnesCondition from './ArnesCondition';
 import CompleteCheckList from './CompleteCheckList';
+import logo from "../asset/bhp-logo 2.png"
 
 const CheckList = ({arnesCondition, additionOfArnesConditions}) => {
     const estadoDelArnes = [
@@ -16,11 +17,12 @@ const CheckList = ({arnesCondition, additionOfArnesConditions}) => {
     
     
     return (
-        <div>
-            <h2>Verifica si el punto de anclaje cuenta con los siguientes requisitos:</h2>
-            <br />
-            <h4>Estado del Arnés</h4>
-            <br/>
+        <div className="containerDiv">
+        <img className= "logo" src={logo} alt="logo"></img>
+        <div className= "checklistDiv">
+            <h2 className= "h2Verif">VERIFICA SI EL PUNTO DE ANCLAJE CUENTA CON LOS SIGUIENTES REQUISITOS:</h2>
+           <div className="boxDivChecklist">
+            <h2 className= "h2Verif">ESTADO DEL ARNÉS</h2>
             <ol> { arnesCondition.length < 8 ?
                 arnesCondition.map((condition) => {
                     return(
@@ -40,6 +42,8 @@ const CheckList = ({arnesCondition, additionOfArnesConditions}) => {
                 />
                 }
             </ol>
+        </div>
+        </div>
         </div>
     )
 }

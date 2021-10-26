@@ -10,7 +10,7 @@ const ArnesConditionWithAnswerNo = ({condition,additionOfArnesConditions,estadoD
               {/*  Modal centrado de forma vertical */}
              
               <button
-                className="btn btn-primary"
+                className="btn btn-primary "
                 data-bs-toggle="modal"
                 data-bs-target="#mi-modal-2"
               >

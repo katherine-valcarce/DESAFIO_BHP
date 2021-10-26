@@ -14,7 +14,7 @@ const Menu = ({setArnesCondition}) => {
           
             <Link to='/verification'>
                 <div><button className= "btn-primary btnMenu" 
-                onClick={() => setArnesCondition([{id:1, pregunta:'¿Pregunta N°1?', respuesta:'si'}])}>
+                onClick={() => setArnesCondition([{id:1, pregunta:'¿Se encuentra libre grasa, pinturas, etc?', respuesta:'si'}])}>
                 Verificación de Arnés y punto de Anclaje</button>
                 </div>
             </Link>

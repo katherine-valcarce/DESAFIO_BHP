@@ -16,6 +16,7 @@ const CompleteCheckList = ({arnesCondition, additionOfArnesConditions}) => {
 
     return (
         <div>
+            <div></div>
 
 <ol>          {
                 estadoDelArnesAux.map((condition) => {
@@ -32,7 +33,9 @@ const CompleteCheckList = ({arnesCondition, additionOfArnesConditions}) => {
                     
                 }
             </ol>
-            <Link to='/checklist2'><button>Continuar</button></Link>
+            <div className="continueBtnDiv">
+            <Link to='/checklist2'><button className= "continueBtn">Continuar</button></Link>
+            </div>
         </div>
     )
 }

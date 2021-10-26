@@ -24,7 +24,15 @@
     font-size: 18px;
     width: 25vh;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .25), 0 4px 11px 8px rgba(0, 0, 0, 0) !important;
+    
 }
+.btn-primary:hover {
+    color: #fff;
+    background-color: hsl(11deg 100% 62%);
+    border-color: hsl(11deg 100% 62%);
+}
+
+
 /* ________home_____ */
 .containerDiv{
     display: flex;
@@ -150,4 +158,222 @@ h2{
     justify-content: space-around;
 }
 
+/* -------Anchor Point Verification----------- */
 
+.btnPointVerif{
+    width: 13vh;
+    height: 7vh;
+    margin: 2vh;
+}
+.boxDiv{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+    height: 30vh;
+    width: 52vh;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid #F7F4F4;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .25), 0 4px 11px 8px rgba(0, 0, 0, 0);
+    border-radius: 5px;
+}
+
+.titleVerif{
+    color: #DD5900;
+    height: 10vh;
+}
+.h2Verif{
+    margin-bottom: 10%;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.boxDivChecklist{
+    border: 1px solid #F7F4F4;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .25), 0 4px 11px 8px rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    padding: 0.75rem;
+
+}
+.checklistDiv{
+    display: flex;
+    padding-top: 1.5rem;
+    flex-direction: column;
+}
+.col{
+    display:flex
+
+}
+
+/* -------Question------- */
+ 
+.titleDoc{
+    font-family: Graphik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    color: #343A40;
+    text-shadow: 0px 1px 1px rgb(0 0 0 / 25%);
+}
+ 
+.textDoc{
+    font-family: Graphik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 2px;
+    color: #000000;
+    margin: 1em;
+}
+.containerAnswer{
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+ 
+.correctAnswer{
+    width: 54%;
+    align-items: center;
+    justify-content:space-between;
+}
+ 
+.titleDoc2{
+    font-family: Graphik;
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 12px;
+text-align: center;
+color: #343A40;
+margin-bottom: 1em;
+margin: 1em;
+}
+ 
+.result{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+ 
+ 
+.containerBtn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 13%;
+}
+ 
+.logoDoc{
+    width: 4em;
+    margin: 1em;
+}
+ 
+.imgLeft{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn{
+    margin: 1vh;
+    
+}
+
+.btnAnswer{
+    margin-bottom: 3vh;
+  
+}
+.continueBtn{
+    font-family: 'Roboto';
+    color: #DD5900;
+    background: #FFFFFF;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 18px;
+    width: 25vh;
+    height: 7vh;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 25%), 0 4px 11px 8px rgb(0 0 0 / 0%) !important;
+}
+.continueBtnDiv{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+ol, ul {
+    padding-left: 0.6rem;
+}
+
+
+/* -------Modal------- */
+
+.modal-header {
+    display: flex;
+    font-family: Graphik;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(.3rem - 1px);
+    border-top-right-radius: calc(.3rem - 1px);
+}
+
+.remove{
+    width: 6em;
+}
+
+.modal-content {
+    font-family: Graphik;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid #FA2121;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    border-radius: .3rem;
+    outline: 0;
+    align-items: center;
+}
+
+.modal-title {
+font-size: 2em;
+}
+
+.textModal {
+    font-family: Graphik;
+    margin-top: 0;
+    margin-bottom: 0rem;
+    font-size: 0.8em;
+}
+
+.btn-close {
+    box-sizing: content-box;
+    width: 1em;
+    height: 1em;
+    padding: .25em .25em;
+    color: #000;
+    border: 0;
+    border-radius: .25rem;
+    opacity: .5;
+    justify-content: flex-end;
+    display: flex;
+    align-content: space-around;
+    margin-left: 19em;
+    margin-top: 0.75em;
+}
