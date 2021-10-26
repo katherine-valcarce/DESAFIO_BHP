@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 
-const AccessoriesConditionWithAnswerYes = ({condition,estadoDelArnes,additionOfArnesConditions }) => {
+const AccessoriesConditionWithAnswerYes = ({condition,estadoDeAccesorios,additionOfAccessoriesConditions }) => {
     return (
         <div>
             <div className="container">
@@ -10,7 +10,7 @@ const AccessoriesConditionWithAnswerYes = ({condition,estadoDelArnes,additionOfA
               {/*  Modal centrado de forma vertical */}
               <button
                 className="btn btn-primary"
-                onClick={() => additionOfArnesConditions(condition.id, estadoDelArnes)}
+                onClick={() => additionOfAccessoriesConditions(condition.id, estadoDeAccesorios)}
               >
                 SI
               </button>

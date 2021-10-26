@@ -2,17 +2,18 @@ import React from 'react'
 import {Link} from "react-router-dom";
 import LifeRopeCondition from './LifeRopeCondition';
 
-const CompleteCheckList4 = ({additionOfLifeRopeConditions, lifeRopeCondition}) => {
+const CompleteCheckList4 = ({additionOfAnchorPointConditions, anchorPointCondition}) => {
   
     const estadoDelArnesAux = [
-        {id:1, pregunta:'¿Pregunta N°1?', respuesta:'no'},
-        {id:2, pregunta:'¿Pregunta N°2?', respuesta:'si'},
-        {id:3, pregunta:'¿Pregunta N°3?', respuesta:'si'},
-        {id:4, pregunta:'¿Pregunta N°4?', respuesta:'no'}, 
-        {id:5, pregunta:'¿Pregunta N°5?', respuesta:'si'},
-        {id:6, pregunta:'¿Pregunta N°6?', respuesta:'no'},
-        {id:7, pregunta:'¿Pregunta N°7?', respuesta:'si'},
+        {id:1, pregunta:'¿Se visualiza alguna modificación del Punto de Anclaje?', respuesta:'no'},
+        {id:2, pregunta:'¿El Punto de Anclaje a utilizar está identificado de color amarillo?', respuesta:'si'},
+        {id:3, pregunta:'¿Se encuentra accesible el Punto de Anclaje a utilizar?', respuesta:'si'},
+        {id:4, pregunta:'¿Existe deformación en alguno de los componentes (argolla, placa, perno, etc)?', respuesta:'no'}, 
+        {id:5, pregunta:'¿Se encuentra instalada la Placa Identificadora que muestra el código, capacidad y estado de aprobación?', respuesta:'si'},
+        {id:6, pregunta:'¿Esta placa cuenta con la fecha de validación, tipo y fijación del anclaje?', respuesta:'si'},
+        {id:7, pregunta:'¿Se aprecian fisuras o golpes en el Punto de Anclaje?', respuesta:'no'},
        ];
+
 
     return (
         <div>
@@ -23,8 +24,8 @@ const CompleteCheckList4 = ({additionOfLifeRopeConditions, lifeRopeCondition}) =
                           <LifeRopeCondition
                            key={condition.id}
                            condition={condition}
-                           additionOfLifeRopeConditions={additionOfLifeRopeConditions}
-                           lifeRopeCondition={lifeRopeCondition}
+                           additionOfAnchorPointConditions={additionOfAnchorPointConditions}
+                           anchorPointCondition={anchorPointCondition}
                             />
                     )
                     }
@@ -32,7 +33,7 @@ const CompleteCheckList4 = ({additionOfLifeRopeConditions, lifeRopeCondition}) =
                     
                 }
             </ol>
-            <Link to='/checklist2'><button>Continuar</button></Link>
+            <Link to='/results'><button>Finalizar</button></Link>
         </div>
     )
 }

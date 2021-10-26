@@ -23,9 +23,10 @@ const [position, setPosition] = useState('');
 /* ---------------------------------------------------------------------------------- */
   
 
-  const [arnesCondition, setArnesCondition] = useState([{id:1, pregunta:'¿Pregunta N°1?', respuesta:'si'}]);
-  const [lifeRopeCondition, setLifeRopeCondition] = useState([{id:1, pregunta:'¿Pregunta N°1?', respuesta:'no'}]);
-  console.log(arnesCondition);
+  const [arnesCondition, setArnesCondition] = useState([{id:1, pregunta:'¿Se encuentra libre grasa, pinturas, etc?', respuesta:'si'}]);
+  const [accessoriesCondition, setAccessoriesCondition] = useState([{id:1, pregunta:'¿Los anillos en D presentan deformaciones?', respuesta:'no'}]);
+  const [lifeRopeCondition, setLifeRopeCondition] = useState([{id:1, pregunta:'¿Se encuentran libres de grasa, pintura, etc?', respuesta:'si'}]);
+  const [anchorPointCondition, setAnchorPointCondition] = useState([{id:1, pregunta:'¿Se visualiza alguna modificación del Punto de Anclaje?', respuesta:'no'}]);
   
 
 /*---------Funciónes que agregan las condiciones de validación de punto de anclaje---------------- */
@@ -56,6 +57,35 @@ const [position, setPosition] = useState('');
       
       }
  }
+
+ const  additionOfAccessoriesConditions = (id, data) => {
+  const copyOfAccessoriesConditions = [...accessoriesCondition];
+
+  if(copyOfAccessoriesConditions.filter((item)=>{return item.id === id+1}).length>0){
+       return;
+  }else if( id === data.length){
+    setAccessoriesCondition(copyOfAccessoriesConditions);
+  }else{
+    copyOfAccessoriesConditions.push(data[id]);
+    setAccessoriesCondition(copyOfAccessoriesConditions);
+      
+      }
+ }
+
+ const  additionOfAnchorPointConditions = (id, data) => {
+  const copyOfAnchorPointConditions = [...anchorPointCondition];
+
+  if(copyOfAnchorPointConditions.filter((item)=>{return item.id === id+1}).length>0){
+       return;
+  }else if( id === data.length){
+    setAnchorPointCondition(copyOfAnchorPointConditions);
+  }else{
+    copyOfAnchorPointConditions.push(data[id]);
+    setAnchorPointCondition(copyOfAnchorPointConditions);
+      
+      }
+ }
+
 /* ------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------ */
   const [estrobo, setEstrobo] = useState('1.2');
@@ -117,16 +147,23 @@ return (
         />
       </Route>
       <Route path="/checklist2">
-        <CheckList2/>
+        <CheckList2
+        accessoriesCondition={accessoriesCondition}
+        setAccessoriesCondition={setAccessoriesCondition}
+        additionOfAccessoriesConditions={additionOfAccessoriesConditions}/>
       </Route>
       <Route path="/checklist3">
-        <CheckList3/>
-      </Route>
-      <Route path="/checklist4">
-        <CheckList4
+        <CheckList3
         lifeRopeCondition={lifeRopeCondition}
         setLifeRopeCondition={setLifeRopeCondition}
         additionOfLifeRopeConditions={additionOfLifeRopeConditions}
+        />
+      </Route>
+      <Route path="/checklist4">
+        <CheckList4
+        additionOfAnchorPointConditions={additionOfAnchorPointConditions}
+        anchorPointCondition={anchorPointCondition}
+        setAnchorPointCondition={setAnchorPointCondition}
         />
       </Route>
       <Route path="/results">
