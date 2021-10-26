@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from "react-router-dom";
-
 const AnchorPointConditionWithAnswerYes = ({condition,estadoDelPuntoDeAnclaje,additionOfAnchorPointConditions }) => {
     return (
         <div>
@@ -44,7 +43,6 @@ const AnchorPointConditionWithAnswerYes = ({condition,estadoDelPuntoDeAnclaje,ad
                         class="btn-close"
                         data-bs-dismiss="modal"
                         aria-label="cerrar"
-                        
                       ></button>
                       </Link>
                     </div>
@@ -56,14 +54,12 @@ const AnchorPointConditionWithAnswerYes = ({condition,estadoDelPuntoDeAnclaje,ad
                         deleniti numquam quas laboriosam.
                       </p>
                     </div>
-                    
                     <div class="modal-footer">
                     <Link to='/menu'>
                       <button
                         type="button"
                         class="btn btn-light"
                         data-bs-dismiss="modal"
-                       
                       >
                         De acuerdo
                       </button>
@@ -78,5 +74,4 @@ const AnchorPointConditionWithAnswerYes = ({condition,estadoDelPuntoDeAnclaje,ad
         </div>
     )
 }
-
 export default AnchorPointConditionWithAnswerYes

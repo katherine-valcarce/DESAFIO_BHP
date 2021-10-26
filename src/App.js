@@ -27,7 +27,7 @@ const [position, setPosition] = useState('');
   const [accessoriesCondition, setAccessoriesCondition] = useState([{id:1, pregunta:'¿Los anillos en D presentan deformaciones?', respuesta:'no'}]);
   const [lifeRopeCondition, setLifeRopeCondition] = useState([{id:1, pregunta:'¿Se encuentran libres de grasa, pintura, etc?', respuesta:'si'}]);
   const [anchorPointCondition, setAnchorPointCondition] = useState([{id:1, pregunta:'¿Se visualiza alguna modificación del Punto de Anclaje?', respuesta:'no'}]);
-  
+  const [checklist, setChecklist] = useState(false);  
 
 /*---------Funciónes que agregan las condiciones de validación de punto de anclaje---------------- */
  const  additionOfArnesConditions = (id, data) => {
@@ -44,17 +44,15 @@ const [position, setPosition] = useState('');
       }
  }
 
- const  additionOfLifeRopeConditions = (id, data) => {
-  const copyOfLifeRopeConditions = [...lifeRopeCondition];
-
-  if(copyOfLifeRopeConditions.filter((item)=>{return item.id === id+1}).length>0){
+ const  additionOfAnchorPointConditions = (id, data) => {
+  const copyOfAnchorPointConditions = [...anchorPointCondition];
+  if(copyOfAnchorPointConditions.filter((item)=>{return item.id === id+1}).length>0){
        return;
   }else if( id === data.length){
-    setLifeRopeCondition(copyOfLifeRopeConditions);
+    setAnchorPointCondition(copyOfAnchorPointConditions);
   }else{
-    copyOfLifeRopeConditions.push(data[id]);
-    setLifeRopeCondition(copyOfLifeRopeConditions);
-      
+    copyOfAnchorPointConditions.push(data[id]);
+    setAnchorPointCondition(copyOfAnchorPointConditions);
       }
  }
 
@@ -72,20 +70,20 @@ const [position, setPosition] = useState('');
       }
  }
 
- const  additionOfAnchorPointConditions = (id, data) => {
-  const copyOfAnchorPointConditions = [...anchorPointCondition];
+ const  additionOfLifeRopeConditions = (id, data) => {
+  const copyOfLifeRopeConditions = [...lifeRopeCondition];
 
-  if(copyOfAnchorPointConditions.filter((item)=>{return item.id === id+1}).length>0){
+  if(copyOfLifeRopeConditions.filter((item)=>{return item.id === id+1}).length>0){
        return;
   }else if( id === data.length){
-    setAnchorPointCondition(copyOfAnchorPointConditions);
+    setLifeRopeCondition(copyOfLifeRopeConditions);
   }else{
-    copyOfAnchorPointConditions.push(data[id]);
-    setAnchorPointCondition(copyOfAnchorPointConditions);
+    copyOfLifeRopeConditions.push(data[id]);
+    setLifeRopeCondition(copyOfLifeRopeConditions);
       
       }
  }
-
+ 
 /* ------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------ */
   const [estrobo, setEstrobo] = useState('1.2');
@@ -164,6 +162,7 @@ return (
         additionOfAnchorPointConditions={additionOfAnchorPointConditions}
         anchorPointCondition={anchorPointCondition}
         setAnchorPointCondition={setAnchorPointCondition}
+        setChecklist={setChecklist}
         />
       </Route>
       <Route path="/results">
@@ -173,6 +172,8 @@ return (
         space={space}
         informationELC={informationELC}
         onChangeinformationELC={onChangeinformationELC}
+        checklist={checklist}
+        setChecklist={setChecklist}
         
         />
       </Route>
