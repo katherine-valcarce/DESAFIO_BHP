@@ -4,10 +4,10 @@ import LifeRopeCondition from './LifeRopeCondition';
 
 const CheckList3 = ({lifeRopeCondition, additionOfLifeRopeConditions}) => {
     const estadoDeCuerdaDeVida = [
-        {id:1, pregunta:'¿Pregunta N°1?', respuesta:'si'},
-        {id:2, pregunta:'¿Pregunta N°2?', respuesta:'si'},
-        {id:3, pregunta:'¿Pregunta N°3?', respuesta:'no'},
-        {id:4, pregunta:'¿Pregunta N°4?', respuesta:'no'}, 
+        {id:1, pregunta:'¿Se encuentran libres de grasa, pintura, etc?', respuesta:'si'},
+        {id:2, pregunta:'¿Están los ganchos en buen estado?', respuesta:'si'},
+        {id:3, pregunta:'¿Presenta cortes en sus hebras?', respuesta:'no'},
+        {id:4, pregunta:'¿Presenta costuras deshilachadas?', respuesta:'no'}, 
         {}
        ];
     

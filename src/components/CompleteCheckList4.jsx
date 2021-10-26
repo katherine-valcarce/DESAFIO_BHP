@@ -1,9 +1,10 @@
 import React from 'react'
-import AnchorPointCondition from './AnchorPointCondition';
-import CompleteCheckList4 from './CompleteCheckList4';
+import {Link} from "react-router-dom";
+import LifeRopeCondition from './LifeRopeCondition';
 
-const CheckList4 = ({anchorPointCondition, additionOfAnchorPointConditions}) => {
-    const estadoDelPuntoDeAnclaje = [
+const CompleteCheckList4 = ({additionOfAnchorPointConditions, anchorPointCondition}) => {
+  
+    const estadoDelArnesAux = [
         {id:1, pregunta:'¿Se visualiza alguna modificación del Punto de Anclaje?', respuesta:'no'},
         {id:2, pregunta:'¿El Punto de Anclaje a utilizar está identificado de color amarillo?', respuesta:'si'},
         {id:3, pregunta:'¿Se encuentra accesible el Punto de Anclaje a utilizar?', respuesta:'si'},
@@ -11,36 +12,30 @@ const CheckList4 = ({anchorPointCondition, additionOfAnchorPointConditions}) => 
         {id:5, pregunta:'¿Se encuentra instalada la Placa Identificadora que muestra el código, capacidad y estado de aprobación?', respuesta:'si'},
         {id:6, pregunta:'¿Esta placa cuenta con la fecha de validación, tipo y fijación del anclaje?', respuesta:'si'},
         {id:7, pregunta:'¿Se aprecian fisuras o golpes en el Punto de Anclaje?', respuesta:'no'},
-        {}
        ];
-    
-    
+
+
     return (
         <div>
-            <h2>Verifica si el punto de anclaje cuenta con los siguientes requisitos:</h2>
-            <br />
-            <h4>Estado del punto de anclaje</h4>
-            <br/>
-            <ol> { anchorPointCondition.length < 8 ?
-                anchorPointCondition.map((condition) => {
+
+<ol>          {
+                estadoDelArnesAux.map((condition) => {
                     return(
-                          <AnchorPointCondition
+                          <LifeRopeCondition
                            key={condition.id}
                            condition={condition}
                            additionOfAnchorPointConditions={additionOfAnchorPointConditions}
-                           estadoDelPuntoDeAnclaje={estadoDelPuntoDeAnclaje}
+                           anchorPointCondition={anchorPointCondition}
                             />
                     )
                     }
                     )
-                    :
-                <CompleteCheckList4
-                anchorPointCondition={anchorPointCondition}
-                additionOfAnchorPointConditions={additionOfAnchorPointConditions}
-                />
+                    
                 }
             </ol>
+            <Link to='/results'><button>Finalizar</button></Link>
         </div>
     )
 }
-export default CheckList4;
+
+export default CompleteCheckList4

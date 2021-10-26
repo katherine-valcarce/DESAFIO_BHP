@@ -1,25 +1,20 @@
 import React from 'react'
-import {Link} from "react-router-dom";
+import {Link} from "react-router-dom"
 
-const AccessoriesConditionWithAnswerYes = ({condition,estadoDelArnes,additionOfArnesConditions }) => {
+const AccessoriesConditionWithAnswerNo = ({condition,additionOfAccessoriesConditions,estadoDeAccesorios}) => {
     return (
         <div>
-            <div className="container">
+              <div className="container">
           <div className="row">
             <div className="col">
               {/*  Modal centrado de forma vertical */}
-              <button
-                className="btn btn-primary"
-                onClick={() => additionOfArnesConditions(condition.id, estadoDelArnes)}
-              >
-                SI
-              </button>
+             
               <button
                 className="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#mi-modal-2"
               >
-                NO
+                SI
               </button>
               <div
                 class="modal fade"
@@ -72,6 +67,12 @@ const AccessoriesConditionWithAnswerYes = ({condition,estadoDelArnes,additionOfA
                   </div>
                 </div>
               </div>
+               <button
+                className="btn btn-primary"
+                onClick={() => additionOfAccessoriesConditions(condition.id, estadoDeAccesorios)}
+              >
+                NO
+              </button>
             </div>
           </div>
         </div>
@@ -79,4 +80,4 @@ const AccessoriesConditionWithAnswerYes = ({condition,estadoDelArnes,additionOfA
     )
 }
 
-export default AccessoriesConditionWithAnswerYes
+export default AccessoriesConditionWithAnswerNo
