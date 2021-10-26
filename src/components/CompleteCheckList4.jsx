@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from "react-router-dom";
-import LifeRopeCondition from './LifeRopeCondition';
+import AnchorPointCondition from './AnchorPointCondition';
 
 const CompleteCheckList4 = ({additionOfAnchorPointConditions, anchorPointCondition}) => {
   
@@ -21,7 +21,7 @@ const CompleteCheckList4 = ({additionOfAnchorPointConditions, anchorPointConditi
 <ol>          {
                 estadoDelArnesAux.map((condition) => {
                     return(
-                          <LifeRopeCondition
+                          <AnchorPointCondition
                            key={condition.id}
                            condition={condition}
                            additionOfAnchorPointConditions={additionOfAnchorPointConditions}
