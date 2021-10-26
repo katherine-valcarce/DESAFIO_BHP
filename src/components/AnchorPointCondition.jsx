@@ -1,16 +1,13 @@
 import React from 'react'
 import AnchorPointConditionWithAnswerYes from './AnchorPointConditionWithAnswerYes';
 import AnchorPointConditionWithAnswerNo from './AnchorPointConditionWithAnswerNo';
-
 const AnchorPointCondition = ({condition, additionOfAnchorPointConditions, estadoDelPuntoDeAnclaje}) => {
-    
-
   return (
     <div>
       <li>
         {condition.pregunta}
         {condition.respuesta ==='si' ?
-        <AnchorPointConditionWithAnswerYes 
+        <AnchorPointConditionWithAnswerYes
         condition={condition}
         additionOfAnchorPointConditions={additionOfAnchorPointConditions}
         estadoDelPuntoDeAnclaje={estadoDelPuntoDeAnclaje}
@@ -22,10 +19,8 @@ const AnchorPointCondition = ({condition, additionOfAnchorPointConditions, estad
         estadoDelPuntoDeAnclaje={estadoDelPuntoDeAnclaje}
         />
          }
-        
       </li>
     </div>
   );
 };
-
 export default AnchorPointCondition
