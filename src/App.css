@@ -219,32 +219,36 @@ h2{
     text-align: center;
     color: #343A40;
     text-shadow: 0px 1px 1px rgb(0 0 0 / 25%);
+    margin-bottom: 1em; 
 }
- 
+
 .textDoc{
-    font-family: Graphik;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 11px;
-    line-height: 2px;
-    color: #000000;
-    margin: 1em;
+font-family: Graphik;
+font-style: normal;
+font-weight: normal;
+font-size: 11px;
+line-height: 2px;
+color: #000000;
+margin: 1em;
 }
-.containerAnswer{
-    width: 100vh;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+.containerAnswer {
+width: 100vh;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+margin-bottom: 2em;
 }
- 
+
 .correctAnswer{
-    width: 54%;
-    align-items: center;
-    justify-content:space-between;
+margin-left: 0.5em;
+width: 54%;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 1em;
 }
- 
+
 .titleDoc2{
-    font-family: Graphik;
+font-family: Graphik;
 font-style: normal;
 font-weight: 500;
 font-size: 11px;
@@ -254,35 +258,36 @@ color: #343A40;
 margin-bottom: 1em;
 margin: 1em;
 }
- 
+
 .result{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-}
- 
- 
-.containerBtn{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 13%;
-}
- 
-.logoDoc{
-    width: 4em;
-    margin: 1em;
-}
- 
-.imgLeft{
-    display: flex;
-    justify-content: flex-end;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: flex-start;
 }
 
+
+.containerBtn{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-content: center;
+flex-wrap: wrap;
+align-items: center;
+margin: 13%;
+}
+
+.logoDoc{
+width: 4em;
+margin: 1em;
+}
+
+.imgLeft{
+display: flex;
+justify-content: flex-end;
+}
+
+/* -------CheckList------- */
 .btn{
     margin: 1vh;
     
