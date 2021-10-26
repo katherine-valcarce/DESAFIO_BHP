@@ -24,9 +24,9 @@ const [position, setPosition] = useState('');
   
 
   const [arnesCondition, setArnesCondition] = useState([{id:1, pregunta:'¿Pregunta N°1?', respuesta:'si'}]);
-  const [lifeRopeCondition, setLifeRopeCondition] = useState([{id:1, pregunta:'¿Pregunta N°1?', respuesta:'no'}]);
-  console.log(arnesCondition);
-  
+  const [anchorPointCondition, setAnchorPointCondition] = useState([{id:1, pregunta:'¿Se visualiza alguna modificación del Punto de Anclaje?', respuesta:'no'}]);
+  const [checklist, setChecklist] = useState(false);  
+  console.log(checklist);
 
 /*---------Funciónes que agregan las condiciones de validación de punto de anclaje---------------- */
  const  additionOfArnesConditions = (id, data) => {
@@ -43,17 +43,15 @@ const [position, setPosition] = useState('');
       }
  }
 
- const  additionOfLifeRopeConditions = (id, data) => {
-  const copyOfLifeRopeConditions = [...lifeRopeCondition];
-
-  if(copyOfLifeRopeConditions.filter((item)=>{return item.id === id+1}).length>0){
+ const  additionOfAnchorPointConditions = (id, data) => {
+  const copyOfAnchorPointConditions = [...anchorPointCondition];
+  if(copyOfAnchorPointConditions.filter((item)=>{return item.id === id+1}).length>0){
        return;
   }else if( id === data.length){
-    setLifeRopeCondition(copyOfLifeRopeConditions);
+    setAnchorPointCondition(copyOfAnchorPointConditions);
   }else{
-    copyOfLifeRopeConditions.push(data[id]);
-    setLifeRopeCondition(copyOfLifeRopeConditions);
-      
+    copyOfAnchorPointConditions.push(data[id]);
+    setAnchorPointCondition(copyOfAnchorPointConditions);
       }
  }
 /* ------------------------------------------------------------------------------------------ */
@@ -124,9 +122,10 @@ return (
       </Route>
       <Route path="/checklist4">
         <CheckList4
-        lifeRopeCondition={lifeRopeCondition}
-        setLifeRopeCondition={setLifeRopeCondition}
-        additionOfLifeRopeConditions={additionOfLifeRopeConditions}
+        anchorPointCondition={anchorPointCondition}
+        setAnchorPointCondition={setAnchorPointCondition}
+        additionOfAnchorPointConditions={additionOfAnchorPointConditions}
+        setChecklist={setChecklist}
         />
       </Route>
       <Route path="/results">
@@ -136,6 +135,8 @@ return (
         space={space}
         informationELC={informationELC}
         onChangeinformationELC={onChangeinformationELC}
+        checklist={checklist}
+        setChecklist={setChecklist}
         
         />
       </Route>

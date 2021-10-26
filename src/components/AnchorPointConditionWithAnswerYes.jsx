@@ -1,7 +1,6 @@
 import React from 'react'
 import {Link} from "react-router-dom";
-
-const LifeRopeConditionWithAnswerYes = ({condition,additionOfLifeRopeConditions, estadoDeCuerdaDeVida }) => {
+const AnchorPointConditionWithAnswerYes = ({condition,estadoDelPuntoDeAnclaje,additionOfAnchorPointConditions }) => {
     return (
         <div>
             <div className="container">
@@ -10,7 +9,7 @@ const LifeRopeConditionWithAnswerYes = ({condition,additionOfLifeRopeConditions,
               {/*  Modal centrado de forma vertical */}
               <button
                 className="btn btn-primary"
-                onClick={() => additionOfLifeRopeConditions(condition.id, estadoDeCuerdaDeVida)}
+                onClick={() => additionOfAnchorPointConditions(condition.id, estadoDelPuntoDeAnclaje)}
               >
                 SI
               </button>
@@ -44,7 +43,6 @@ const LifeRopeConditionWithAnswerYes = ({condition,additionOfLifeRopeConditions,
                         class="btn-close"
                         data-bs-dismiss="modal"
                         aria-label="cerrar"
-                        
                       ></button>
                       </Link>
                     </div>
@@ -56,14 +54,12 @@ const LifeRopeConditionWithAnswerYes = ({condition,additionOfLifeRopeConditions,
                         deleniti numquam quas laboriosam.
                       </p>
                     </div>
-                    
                     <div class="modal-footer">
                     <Link to='/menu'>
                       <button
                         type="button"
                         class="btn btn-light"
                         data-bs-dismiss="modal"
-                       
                       >
                         De acuerdo
                       </button>
@@ -78,5 +74,4 @@ const LifeRopeConditionWithAnswerYes = ({condition,additionOfLifeRopeConditions,
         </div>
     )
 }
-
-export default LifeRopeConditionWithAnswerYes
+export default AnchorPointConditionWithAnswerYes

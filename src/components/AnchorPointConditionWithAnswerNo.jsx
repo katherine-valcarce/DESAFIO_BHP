@@ -1,14 +1,12 @@
 import React from 'react'
 import {Link} from "react-router-dom"
-
-const LifeRopeConditionWithAnswerNo = ({condition,additionOfLifeRopeConditions, estadoDeCuerdaDeVida}) => {
+const AnchorPointConditionWithAnswerNo = ({condition,additionOfAnchorPointConditions,estadoDelPuntoDeAnclaje}) => {
     return (
         <div>
               <div className="container">
           <div className="row">
             <div className="col">
               {/*  Modal centrado de forma vertical */}
-             
               <button
                 className="btn btn-primary"
                 data-bs-toggle="modal"
@@ -39,7 +37,6 @@ const LifeRopeConditionWithAnswerNo = ({condition,additionOfLifeRopeConditions, 
                         class="btn-close"
                         data-bs-dismiss="modal"
                         aria-label="cerrar"
-                        
                       ></button>
                       </Link>
                     </div>
@@ -51,14 +48,12 @@ const LifeRopeConditionWithAnswerNo = ({condition,additionOfLifeRopeConditions, 
                         deleniti numquam quas laboriosam.
                       </p>
                     </div>
-                    
                     <div class="modal-footer">
                     <Link to='/menu'>
                       <button
                         type="button"
                         class="btn btn-light"
                         data-bs-dismiss="modal"
-                       
                       >
                         De acuerdo
                       </button>
@@ -69,7 +64,7 @@ const LifeRopeConditionWithAnswerNo = ({condition,additionOfLifeRopeConditions, 
               </div>
                <button
                 className="btn btn-primary"
-                onClick={() => additionOfLifeRopeConditions(condition.id, estadoDeCuerdaDeVida)}
+                onClick={() => additionOfAnchorPointConditions(condition.id, estadoDelPuntoDeAnclaje)}
               >
                 NO
               </button>
@@ -79,5 +74,4 @@ const LifeRopeConditionWithAnswerNo = ({condition,additionOfLifeRopeConditions, 
         </div>
     )
 }
-
-export default LifeRopeConditionWithAnswerNo
+export default AnchorPointConditionWithAnswerNo
