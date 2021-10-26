@@ -24,8 +24,9 @@ const [position, setPosition] = useState('');
   
 
   const [arnesCondition, setArnesCondition] = useState([{id:1, pregunta:'¿Pregunta N°1?', respuesta:'si'}]);
-  const [lifeRopeCondition, setLifeRopeCondition] = useState([{id:1, pregunta:'¿Pregunta N°1?', respuesta:'no'}]);
-  console.log(arnesCondition);
+  const [accessoriesCondition, setAccessoriesCondition] = useState([{id:1, pregunta:'¿Pregunta N°1?', respuesta:'no'}]);
+  const [lifeRopeCondition, setLifeRopeCondition] = useState([{id:1, pregunta:'¿Pregunta N°1?', respuesta:'si'}]);
+  const [anchorPointCondition, setAnchorPointCondition] = useState([{id:1, pregunta:'¿Pregunta N°1?', respuesta:'no'}]);
   
 
 /*---------Funciónes que agregan las condiciones de validación de punto de anclaje---------------- */
@@ -56,6 +57,35 @@ const [position, setPosition] = useState('');
       
       }
  }
+
+ const  additionOfAccessoriesConditions = (id, data) => {
+  const copyOfAccessoriesConditions = [...accessoriesCondition];
+
+  if(copyOfAccessoriesConditions.filter((item)=>{return item.id === id+1}).length>0){
+       return;
+  }else if( id === data.length){
+    setAccessoriesCondition(copyOfAccessoriesConditions);
+  }else{
+    copyOfAccessoriesConditions.push(data[id]);
+    setAccessoriesCondition(copyOfAccessoriesConditions);
+      
+      }
+ }
+
+//  const  additionOfAccessoriesConditions = (id, data) => {
+//   const copyOfAccessoriesConditions = [...accessoriesCondition];
+
+//   if(copyOfAccessoriesConditions.filter((item)=>{return item.id === id+1}).length>0){
+//        return;
+//   }else if( id === data.length){
+//     setAccessoriesCondition(copyOfAccessoriesConditions);
+//   }else{
+//     copyOfAccessoriesConditions.push(data[id]);
+//     setAccessoriesCondition(copyOfAccessoriesConditions);
+      
+//       }
+//  }
+
 /* ------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------ */
   const [estrobo, setEstrobo] = useState('1.2');
@@ -120,13 +150,14 @@ return (
         <CheckList2/>
       </Route>
       <Route path="/checklist3">
-        <CheckList3/>
-      </Route>
-      <Route path="/checklist4">
-        <CheckList4
+        <CheckList3
         lifeRopeCondition={lifeRopeCondition}
         setLifeRopeCondition={setLifeRopeCondition}
         additionOfLifeRopeConditions={additionOfLifeRopeConditions}
+        />
+      </Route>
+      <Route path="/checklist4">
+        <CheckList4
         />
       </Route>
       <Route path="/results">
