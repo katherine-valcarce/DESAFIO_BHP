@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from "react-router-dom";
 import logo from "../asset/logo.png"
 
 const Calculator = ({estrobo, setEstrobo, height, setHeight, space, setSpace, onChangeinformationELC}) => {
@@ -23,7 +22,7 @@ const Calculator = ({estrobo, setEstrobo, height, setHeight, space, setSpace, on
             <img src={logo} alt="logo" />
             <h2>Cálculo de Espacio Libre de Caída</h2>
             <h5>Ingrese los datos solicitados</h5>
-            <form action="">
+            <form action='/results' >
                 <div>
                     <label htmlFor="estrobo">Longitud del Estrobo:</label>
                     <select 
@@ -31,11 +30,12 @@ const Calculator = ({estrobo, setEstrobo, height, setHeight, space, setSpace, on
                     id="estrobo"
                     value={estrobo}
                     onChange={onChangeEstrobo}
-
+                    required
                     >
-                        <option>1.2</option>
-                        <option>1.5</option>
-                        <option>1.8</option>
+                        <option value="">Seleccione una opción</option>
+                        <option value="1">1.2</option>
+                        <option value="2">1.5</option>
+                        <option value="3">1.8</option>
                     </select>
                     
                 </div>
@@ -48,6 +48,7 @@ const Calculator = ({estrobo, setEstrobo, height, setHeight, space, setSpace, on
                     id="estatura"
                     value={height}
                     onChange={onChangeHeight}
+                    required
                     />
                 </div>
                 <br/>
@@ -59,18 +60,12 @@ const Calculator = ({estrobo, setEstrobo, height, setHeight, space, setSpace, on
                     id="espacioReal"
                     value={space} 
                     onChange={onChangeSpace}
-                    
+                    required
                     />
                 </div>
                 <br/>
-                <Link to='/results'>
-                <button
-                type="submit"
-                onClick={() => onChangeinformationELC(estrobo,height,space) }
-                >
-                Continuar
-                </button>
-                </Link>
+                
+                <input type="submit" value="Continuar" onClick={() => onChangeinformationELC(estrobo,height,space)}></input>
             </form>
         </div>
     )

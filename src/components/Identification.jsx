@@ -39,7 +39,7 @@ const identification = (props) => {
                         <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..." required />
                         <h2>Acepto términos y condiciones</h2>
                     </div>
-                    <input type="submit" value="INGRESAR" className="btn-primary btn" ></input>
+                    <input type="submit" value="INGRESAR" className="btn-primary btn"></input>
                 </form>
 
             </div>
