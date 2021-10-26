@@ -1,24 +1,28 @@
 import React from 'react'
 import {Link} from "react-router-dom";
+import Check from "../asset/check.png";
+import Logo from "../asset/bhp-logo 2.png"
+import Draw from "../asset/grafic.png";
+
 
 
 
 const Results = ({estrobo, height, space, informationELC, onChangeinformationELC,checklist, setChecklist}) => {
     return (
-        <div>
+        <>
             {checklist === true && informationELC === 'Estarás a salvo' ?
                <div>
-                   <h2>¡Cumple con la verificación de seguridad!</h2>
+                   <h2>¡CUMPLE CON LAS VERIFICACIONES DE SEGURIDAD!</h2>
                    <div>
                        <Link to='/doc'>
-                           <button>
+                           <button className="btn btn-primary">
                             Imprimir PDF
                            </button>
                        </Link>
                    </div>
                    <Link to='/'>
                        <div>
-                           <button>
+                           <button className="btn btn-primary">
                             Inicio
                            </button>
                        </div>
@@ -26,21 +30,34 @@ const Results = ({estrobo, height, space, informationELC, onChangeinformationELC
                </div>
                :
                   checklist === false && informationELC === 'Estarás a salvo' ?
-                   <div>
-                   <input
+                   <>
+                   <img className="logoDoc" src= {Logo} alt="logo" />
+                   <div className="containerResult">
+
+<h1 className="titleDoc3">
+        Resultado
+      </h1>
+      <div className="containerImg"></div>
+      <img className="resultGrapic"src={Draw} alt="Draw"></img>
+                   <input className="inputResult"
                    type="text"
                    value={onChangeinformationELC(estrobo,height,space)}
                    />
-                   <p>Para cumplir con el estándar de seguridad
-                    realice la verificación de arnés y punto de anclaje:
+                   <div className="checkResult">
+                   <img className="checkIcon" src={Check} alt="check" /> 
+                   <p className="textResult"> <u>
+                   El resultado cumple con el estándar de seguridad </u> 
+                    para terminar con el cumplimiento realice:
                    </p>
+                   </div>
                    <Link to="/verification">
-                   <button>verificación de arnés y punto de anclaje</button>
+                   <button className="btn verification btn-primary">Verificación de arnés y punto de anclaje</button>
                    </Link>
-               </div>
+                   </div>
+               </>
                :
                checklist === false && informationELC === 'Estarás en peligro' ?
-               <div>
+               <>
                    <input
                    type="text"
                    value={onChangeinformationELC(estrobo,height,space)}
@@ -51,16 +68,23 @@ const Results = ({estrobo, height, space, informationELC, onChangeinformationELC
                     <Link to='/calculator'>
                     <button>Calculadora</button>
                     </Link>
-                   </div>
+                   </>
                    :
                    checklist === true && (informationELC === '' || informationELC === 'Estarás en peligro') ?
-                   <div>
-                       <h2>Cumple con las verificaciones de seguridad</h2>
-                       <p>Para cumplir con el estándar de seguridad realice el
+
+                   <div className="containerDivResult">
+                   <div className="resultContainer">
+                    
+                    <img className="remove" src={Check} alt="check" /> 
+                    
+                       <b className= "textModal">¡CUMPLE CON LAS VERIFICACIONES DE SEGURIDAD!</b>
+                       <p className="textModal">Para cumplir con el estándar de seguridad realice el
                        cálculo de Espacio de Libre Caída
                         </p>
-                        <Link to='/calculator'>
-                    <button>Calculadora</button>
+    
+                   </div>
+                   <Link to='/calculator'>
+                    <button className="btn btn-primary">Calculadora</button>
                     </Link>
                    </div>
                    :
@@ -69,7 +93,7 @@ const Results = ({estrobo, height, space, informationELC, onChangeinformationELC
 
             }
         
-        </div>
+        </>
     )
 }
 
