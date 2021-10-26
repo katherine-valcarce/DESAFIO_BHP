@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import logo from "../asset/bhp-logo 2.png"
 
 const Calculator = ({estrobo, setEstrobo, height, setHeight, space, setSpace, onChangeinformationELC}) => {
@@ -39,10 +40,9 @@ const Calculator = ({estrobo, setEstrobo, height, setHeight, space, setSpace, on
                     onChange={onChangeEstrobo}
 
                     required>
-                        <option value=""></option>
-                        <option value="1">1.2</option>
-                        <option value="2">1.5</option>
-                        <option value="3">1.8</option>
+                        <option >1.2</option>
+                        <option >1.5</option>
+                        <option >1.8</option>
                     </select>
     </div>
     <div class="col">
@@ -130,7 +130,16 @@ const Calculator = ({estrobo, setEstrobo, height, setHeight, space, setSpace, on
 </div>
 
           
-  <div className= "divBtnCalculator">              
+  <div className= "divBtnCalculator">    
+  <Link to='/results'>
+                <button
+                type="submit"
+                onClick={() => onChangeinformationELC(estrobo,height,space) }
+                >
+                Continuar
+                </button>
+                </Link>
+          
 <input className="btn-primary calculatorbtn" type="submit" value="CONTINUAR" onClick={() => onChangeinformationELC(estrobo,height,space)}></input>
 </div>
             </form>
