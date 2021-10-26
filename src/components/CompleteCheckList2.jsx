@@ -30,7 +30,9 @@ const CompleteCheckList2 = ({additionOfAccessoriesConditions, accessoriesConditi
                     
                 }
             </ol>
-            <Link to='/checklist3'><button>Continuar</button></Link>
+            <div className="continueBtnDiv">
+            <Link to='/checklist3'><button className= "continueBtn">CONTINUAR</button></Link>
+            </div>
         </div>
     )
 }

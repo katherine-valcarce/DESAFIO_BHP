@@ -34,7 +34,7 @@ const CompleteCheckList = ({arnesCondition, additionOfArnesConditions}) => {
                 }
             </ol>
             <div className="continueBtnDiv">
-            <Link to='/checklist2'><button className= "continueBtn">Continuar</button></Link>
+            <Link to='/checklist2'><button className= "continueBtn">CONTINUAR</button></Link>
             </div>
         </div>
     )

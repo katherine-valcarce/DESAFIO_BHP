@@ -27,13 +27,15 @@ const CompleteCheckList4 = ({additionOfAnchorPointConditions, anchorPointConditi
                     )
                 }
             </ol>
+            <div className="continueBtnDiv">
             <Link to='/results'>
-                <button
+                <button className= "continueBtn"
                 onClick={()=>setChecklist(true)}
                 >
-                    Finalizar
+                    FINALIZAR
                     </button>
                     </Link>
+                    </div>
         </div>
     )
 }
