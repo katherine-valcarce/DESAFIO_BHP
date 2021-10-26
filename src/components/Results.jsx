@@ -39,7 +39,7 @@ const Results = ({estrobo, height, space, informationELC, onChangeinformationELC
                    </Link>
                </div>
                :
-               informationELC === 'Estarás en peligro' ?
+               checklist === false && informationELC === 'Estarás en peligro' ?
                <div>
                    <input
                    type="text"
@@ -53,7 +53,7 @@ const Results = ({estrobo, height, space, informationELC, onChangeinformationELC
                     </Link>
                    </div>
                    :
-                   checklist === true && informationELC === '' ?
+                   checklist === true && (informationELC === '' || informationELC === 'Estarás en peligro') ?
                    <div>
                        <h2>Cumple con las verificaciones de seguridad</h2>
                        <p>Para cumplir con el estándar de seguridad realice el
