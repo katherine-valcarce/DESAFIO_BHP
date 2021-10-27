@@ -1,8 +1,14 @@
+/* eslint-disable no-template-curly-in-string */
 import React from 'react'
 import {Link} from "react-router-dom";
 import Remove from "../asset/remove.png";
 
 const AccessoriesConditionWithAnswerYes = ({condition,estadoDeAccesorios,additionOfAccessoriesConditions }) => {
+  const actionDisplayAndColorChange = () => {
+    additionOfAccessoriesConditions(condition.id,estadoDeAccesorios)
+     document.getElementById(`${condition.id}`).classList.toggle('btn-clicked');
+     
+   }
     return (
         <div>
             <div className="container">
@@ -10,8 +16,9 @@ const AccessoriesConditionWithAnswerYes = ({condition,estadoDeAccesorios,additio
             <div className="col">
               {/*  Modal centrado de forma vertical */}
               <button
+                id={condition.id}
                 className="btn btn-primary"
-                onClick={() => additionOfAccessoriesConditions(condition.id, estadoDeAccesorios)}
+                onClick={() => actionDisplayAndColorChange()}
               >
                 SI
               </button>

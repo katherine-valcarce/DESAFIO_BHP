@@ -3,6 +3,12 @@ import {Link} from "react-router-dom"
 import Remove from "../asset/remove.png";
 
 const AccessoriesConditionWithAnswerNo = ({condition,additionOfAccessoriesConditions,estadoDeAccesorios}) => {
+   const actionDisplayAndColorChange = () => {
+    additionOfAccessoriesConditions(condition.id,estadoDeAccesorios)
+     document.getElementById(`${condition.id}`).classList.toggle('btn-clicked');
+     }
+
+
     return (
         <div>
               <div className="container">
@@ -11,9 +17,10 @@ const AccessoriesConditionWithAnswerNo = ({condition,additionOfAccessoriesCondit
               {/*  Modal centrado de forma vertical */}
              
               <button
-                className="btn btn-primary"
+              className="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#mi-modal-2"
+                
               >
                 SI
               </button>
@@ -66,8 +73,9 @@ const AccessoriesConditionWithAnswerNo = ({condition,additionOfAccessoriesCondit
                 </div>
               </div>
                <button
+                id={condition.id}
                 className="btn btn-primary"
-                onClick={() => additionOfAccessoriesConditions(condition.id, estadoDeAccesorios)}
+                onClick={() => actionDisplayAndColorChange()}
               >
                 NO
               </button>

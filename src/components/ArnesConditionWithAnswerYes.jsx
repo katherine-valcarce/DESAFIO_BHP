@@ -7,6 +7,12 @@ const ArnesConditionWithAnswerYes = ({
   estadoDelArnes,
   additionOfArnesConditions,
 }) => {
+ 
+    const actionDisplayAndColorChange = () => {
+        additionOfArnesConditions(condition.id,estadoDelArnes)
+         document.getElementById(`${condition.id}`).classList.toggle('btn-clicked');
+         }
+
   return (
     <div>
       <div className="container">
@@ -14,10 +20,9 @@ const ArnesConditionWithAnswerYes = ({
           <div className="col">
             {/*  Modal centrado de forma vertical */}
             <button
+              id={condition.id}
               className="btn btn-primary"
-              onClick={() =>
-                additionOfArnesConditions(condition.id, estadoDelArnes)
-              }
+              onClick={() =>actionDisplayAndColorChange()}
             >
               SI
             </button>
