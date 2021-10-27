@@ -562,3 +562,13 @@ u {
   height: 4em;
   padding: 7.25px;
 }
+
+.textpdf{
+  font-family: Graphik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 19px;
+    color: #000000;
+    margin: 1em;
+}
