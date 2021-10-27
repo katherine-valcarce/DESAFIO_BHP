@@ -189,6 +189,11 @@ return (
       </Route>
       <Route path="/doc">
         <Doc 
+        onChangeinformationELC={onChangeinformationELC}
+        informationELC={informationELC}
+        height={height}
+        estrobo={estrobo}
+        space={space}
         user={user}
         setUser={setUser}
         rut={rut}

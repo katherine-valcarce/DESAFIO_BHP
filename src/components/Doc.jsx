@@ -8,7 +8,7 @@ import Draw from "../asset/grafic.png";
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
  
-const Doc = ({user, rut, setUser, setRut}) => {
+const Doc = ({user, rut,informationELC, space, height, estrobo, onChangeinformationELC}) => {
  
   const printDocument = () => {
     const input = document.getElementById("divToPrint");
@@ -70,12 +70,12 @@ const Doc = ({user, rut, setUser, setRut}) => {
       <h5 className="titleDoc2">CALCULO DE ESPACIO LIBRE DE CAÍDA</h5>
       <div className="result">
         <div>
-          <h2 className="textDoc"> Longitud de Estrobo (LE)=</h2>
-          <h2 className="textDoc">  Elongación del Amortiguador de Impacto(EA)=</h2>
-          <h2 className="textDoc">Estatura del Trabajador (ET)=</h2>
-          <h2 className="textDoc">Márgen de Seguridad(MS)=</h2> <br />
+          <h2 className="textDoc"> Longitud de Estrobo (LE) = {estrobo} m </h2>
+          <h2 className="textDoc">  Elongación del Amortiguador de Impacto(EA) = 1.2 m</h2>
+          <h2 className="textDoc">Estatura del Trabajador (ET)= {height} m</h2>
+          <h2 className="textDoc">Márgen de Seguridad(MS) = 1 m</h2> <br />
  
-          <p className="calculatorFont">RESULTADO CÁLCULO DE ESPACIO LIBRE CAÍDA (ELC) =</p>
+          <p className="calculatorFont">RESULTADO CÁLCULO DE ESPACIO LIBRE CAÍDA (ELC) = {onChangeinformationELC(estrobo,height,space)}</p>
         </div>
         <div></div>
         <img src={Draw} alt="Draw"></img>
