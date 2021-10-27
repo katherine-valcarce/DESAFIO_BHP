@@ -109,7 +109,23 @@
   margin: 2vh;
 }
 /* -------Calculator------- */
-
+h2{
+    font-family: Graphik;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000; 
+}
+.inputCalculator{
+    width: 10vh;
+    height: 5vh;
+    border: 1px solid #DD5900;
+    border-radius: 3px;
+}
+.inputCalculatorWithoutBorder{
+    width: 10vh;
+    height: 5vh;
+}
 .bodyContainerCalculator {
   display: flex;
   flex-direction: column;
