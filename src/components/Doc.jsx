@@ -31,7 +31,7 @@ const Doc = (props) => {
         Validación Guía de Cumplimiento de Estándar SDDC
       </h1>
       <h2 className="textDoc"> Nombre de usuario : {user} </h2>
-      <h2 className="textDoc"> Nombre de cargo : {position} </h2>
+      <h2 className="textDoc"> Rut: {position} </h2>
       <h2 className="textDoc"> Fecha y hora de emisión : </h2>
       <hr />
       <h5 className="titleDoc2">
@@ -48,12 +48,12 @@ const Doc = (props) => {
       <h5 className="titleDoc2">CALCULO DE ESPACIO LIBRE DE CAÍDA</h5>
       <div className="result">
         <div>
-          <h2 className="textDoc">LE=</h2>
-          <h2 className="textDoc">EA=</h2>
-          <h2 className="textDoc">ET=</h2>
-          <h2 className="textDoc">MS=</h2> <br />
+          <h2 className="textDoc"> Longitud de Estrobo (LE)=</h2>
+          <h2 className="textDoc">  Elongación del Amortiguador de Impacto(EA)=</h2>
+          <h2 className="textDoc">Estatura del Trabajador (ET)=</h2>
+          <h2 className="textDoc">Márgen de Seguridad(MS)=</h2> <br />
  
-          <h2 className="textDoc">RESULTADO ELC=</h2>
+          <p className="calculatorFont">RESULTADO CÁLCULO DE ESPACIO LIBRE CAÍDA (ELC) =</p>
         </div>
         <div></div>
         <img src={Draw} alt="Draw"></img>

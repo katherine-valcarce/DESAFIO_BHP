@@ -176,6 +176,31 @@ h2 {
   justify-content: space-around;
 }
 
+.calculatorFont{
+    font-size: 13px;
+
+}
+.boxDivCalculator{
+    border: 1px solid #F7F4F4;
+    background: #F7F4F4;
+    height: 70vh;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 25%), 0 4px 11px 8px rgb(0 0 0 / 0%);
+    border-radius: 5px;
+    padding: 0.75rem;
+    padding-top: 2rem;
+}
+.calculatorbtn{
+    width: 25vh;
+    height: 7vh;
+    margin: 2vh;
+}
+.divBtnCalculator{
+    display: flex;
+    justify-content: center;
+}
+.row{
+    margin-bottom: 2vh;
+}
 /* -------Anchor Point Verification----------- */
 
 .btnPointVerif {
