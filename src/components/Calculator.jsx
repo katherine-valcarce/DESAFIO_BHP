@@ -22,8 +22,8 @@ const Calculator = ({ estrobo, setEstrobo, height, setHeight, space, setSpace, o
         <div className="containerDiv">
             <img className="logo" src={logo} alt="logo"></img>
             <div className="checklistDiv">
-                <h2 >Cálculo de Espacio Libre de Caída</h2>
-                <p>Ingrese los datos solicitados</p>
+                <h2 ><strong>Cálculo de Espacio Libre de Caída</strong></h2>
+                <h2>Ingrese los datos solicitados</h2>
 
                 <form className="boxDivCalculator" >
                     <div class="container">
@@ -91,7 +91,7 @@ const Calculator = ({ estrobo, setEstrobo, height, setHeight, space, setSpace, o
                         <div class="row align-items-center">
                             <div class="col-7">
                                 <div className="calculatorFont" >
-                                    <strong>Márgen de Seguridad</strong> <p>(según NCh 1258/6 mayor o igual a 1 m)</p>
+                                    <strong>Márgen de Seguridad</strong> <p><small>(según NCh 1258/6 mayor o igual a 1 m)</small></p>
                                 </div>
                             </div>
                             <div class="col">

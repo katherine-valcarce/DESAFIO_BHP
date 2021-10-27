@@ -14,7 +14,7 @@ const AnchorPointConditionWithAnswerNo = ({condition,additionOfAnchorPointCondit
             <div className="col">
               {/*  Modal centrado de forma vertical */}
               <button
-                className="btn btn-primary"
+                className="btn btn-primary btncheck4"
                 data-bs-toggle="modal"
                 data-bs-target="#mi-modal-2"
               >
@@ -68,7 +68,7 @@ const AnchorPointConditionWithAnswerNo = ({condition,additionOfAnchorPointCondit
               </div>
                <button
                 id={condition.id}
-                className="btn btn-primary"
+                className="btn btn-primary btncheck4"
                 onClick={() => actionDisplayAndColorChange()}
               >
                 NO

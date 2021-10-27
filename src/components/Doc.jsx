@@ -28,7 +28,7 @@ const Doc = (props) => {
       <img className="logoDoc" src= {Logo} alt="logo" />
       </div>
       <h1 className="titleDoc">
-        Validación Guía de Cumplimiento de Estándar SDDC
+       ESTÁNDAR DE DETENCIÓN DE CAIDAS
       </h1>
       <h2 className="textDoc"> Nombre de usuario : {user} </h2>
       <h2 className="textDoc"> Rut: {position} </h2>

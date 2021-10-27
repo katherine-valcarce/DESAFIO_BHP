@@ -27,7 +27,7 @@ const AnchorPointConditionWithAnswerYes = ({
               SI
             </button>
             <button
-              className="btn btn-primary"
+              className="btn btn-primary "
               data-bs-toggle="modal"
               data-bs-target="#mi-modal-2"
             >

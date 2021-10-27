@@ -19,9 +19,9 @@ const Results = ({
     {checklist === true && informationELC === "Estarás a salvo" ? (
         <div className="containerDivResult" >
             <img className="remove" src={Check} alt="check" />
-        <b className="modal-title text-center">
-              ¡CUMPLE CON LAS VERIFICACIONES DE SEGURIDAD!
-            </b>
+        <h1 className="text-center checkResult">
+              CUMPLE CON LAS VERIFICACIONES DE SEGURIDAD
+            </h1>
         <div>
 
             <div className="botonm">
@@ -52,8 +52,8 @@ const Results = ({
               <img className="checkIcon" src={Check} alt="check" />
               <p className="textResult">
                 {" "}
-                <u>El resultado cumple con el estándar de seguridad </u>
-                para terminar con el cumplimiento realice:
+                El resultado permite realizar el trabajo en altura. Para cumplir con el estándar de seguridad realice la <u> Verificación de Arnés y Punto de Anclaje</u>
+               
               </p>
             </div>
             <Link to="/verification">
@@ -75,14 +75,14 @@ const Results = ({
           />
           <div className="checkResult">
           <img className="checkIcon" src={Remove} alt="remove" />
-          <div className="resultContainer">
+          
           <p className="textResult">
-            <b>Contacte con su supervisor de faena </b> y revise nuevamente la seguridad
+            <strong>Contacte con su supervisor de faena. </strong> Revise nuevamente la seguridad
             de su equipamiento o realice los cálculos nuevamente.
           </p>
           
           </div>
-          </div>
+          
           <Link to="/calculator">
           <button className="btn verification btn-primary">OK</button>
           </Link>
@@ -94,7 +94,7 @@ const Results = ({
         <div className="containerDivResult">
           <div className="resultContainer">
             <img className="remove" src={Check} alt="check" />
-
+            <div className="textModaldivBox">
             <b className="textModal">
               ¡CUMPLE CON LAS VERIFICACIONES DE SEGURIDAD!
             </b>
@@ -102,9 +102,10 @@ const Results = ({
               Para cumplir con el estándar de seguridad realice el cálculo de
               Espacio de Libre Caída
             </p>
+            </div>
           </div>
           <Link to="/calculator">
-            <button className="btn btn-primary">Calculadora</button>
+            <button className="btn btn-primary">OK</button>
           </Link>
         </div>
       ) : null}

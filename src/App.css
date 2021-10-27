@@ -120,13 +120,7 @@
   margin: 2vh;
 }
 /* -------Calculator------- */
-h2{
-    font-family: Graphik;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 19px;
-    color: #000000; 
-}
+
 .inputCalculator{
     width: 10vh;
     height: 5vh;
@@ -211,6 +205,11 @@ h2 {
 }
 .row{
     margin-bottom: 2vh;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    --bs-gutter-x: 0.50rem;
+
 }
 /* -------Anchor Point Verification----------- */
 
@@ -258,7 +257,13 @@ h2 {
 }
 .col {
   display: flex;
+
 }
+.btncheck4{
+  width:19vh;
+  margin:2vh;
+}
+
 
 /* -------Question------- */
 
@@ -368,6 +373,7 @@ ul {
   padding-left: 0.6rem;
 }
 
+
 /* -------Modal------- */
 
 .modal-header {
@@ -437,17 +443,26 @@ ul {
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
+  justify-content: space-evenly;
+  height: 100vh
+;
 }
 
 .resultContainer {
-  border: 1 px solid #f7f4f4;
-  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 25%), 0 4px 11px 8px rgb(0 0 0 / 0%);
-  border-radius: 5 px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: -webkit-center;
+  border: 1px
+   solid #f7f4f4;
+      box-shadow: 0 2px 2px 0 rgb(0 0 0 / 25%), 0 4px 11px 8px rgb(0 0 0 / 0%);
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: -webkit-center;
+      margin: 0.75em;
+      padding: 0.75em;
+      height: 50vh;
+      justify-content: space-evenly;
 }
+
 
 .titleDoc3 {
   font-family: Graphik;
@@ -458,7 +473,7 @@ ul {
   text-align: center;
   color: #343a40;
   text-shadow: 0px 1px 1px rgb(0 0 0 / 25%);
-  margin-bottom: 1 em;
+  margin-bottom: 1em;
 }
 
 .inputResult {
@@ -466,6 +481,7 @@ ul {
   height: 5vh;
   border: 1px solid #dd5900;
   border-radius: 3px;
+  margin: 1vh;
 }
 
 .containerImg {
@@ -481,6 +497,9 @@ ul {
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
+  height: 90vh;
+  padding: 1.5rem;
+  justify-content: space-evenly;
 }
 
 .textResult {
@@ -512,11 +531,13 @@ u {
   border: 1 px solid #f7f4f4;
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 25%), 0 4px 11px 8px rgb(0 0 0 / 0%);
   border-radius: 5px;
-  padding: 0.75 rem;
+  padding: 0.75rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  height: 21vh
+  ;
 }
 
 .checkIcon {
