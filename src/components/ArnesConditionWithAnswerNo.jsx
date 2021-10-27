@@ -33,10 +33,7 @@ const ArnesConditionWithAnswerNo = ({
               {/* Caja de diálogo */}
               <div class="modal-dialog modal-dialog-centered">
                 {" "}
-                {/* modal-dialog-centered:centra verticalmente */}
-                {/* Contenido de la caja */}
                 <div class="modal-content">
-                  {/* Encabezado de la caja */}
                   <div className="closedTag">
                     <Link to="/menu">
                       <button
