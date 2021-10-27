@@ -35,8 +35,7 @@ const CheckList4 = ({anchorPointCondition, additionOfAnchorPointConditions, setC
                     )
                     :
                 <CompleteCheckList4
-                anchorPointCondition={anchorPointCondition}
-                additionOfAnchorPointConditions={additionOfAnchorPointConditions}
+                estadoDelPuntoDeAnclaje={estadoDelPuntoDeAnclaje}
                 setChecklist={setChecklist}
                 />
                 }

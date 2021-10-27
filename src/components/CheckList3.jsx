@@ -35,8 +35,7 @@ const CheckList3 = ({lifeRopeCondition, additionOfLifeRopeConditions}) => {
                     )
                     :
                 <CompleteCheckList3
-                lifeRopeCondition={lifeRopeCondition}
-                additionOfLifeRopeConditions={additionOfLifeRopeConditions}
+                estadoDeCuerdaDeVida={estadoDeCuerdaDeVida}
                 />
                 }
             </ol>

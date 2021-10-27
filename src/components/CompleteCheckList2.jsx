@@ -1,40 +1,27 @@
-import React from 'react'
-import {Link} from "react-router-dom";
-import AccessoriesCondition from './AccessoriesCondition';
+import React from "react";
+import { Link } from "react-router-dom";
+import CompleteCheckListItem from "./CompleteCheckListItem";
 
-const CompleteCheckList2 = ({additionOfAccessoriesConditions, accessoriesCondition}) => {
-  
-    const estadoDelArnesAux = [
-        {id:1, pregunta:'¿Los anillos en D presentan deformaciones?', respuesta:'no'},
-        {id:2, pregunta:'¿Están las hebillas en buen estado?', respuesta:'si'},
-        {id:3, pregunta:'¿Mantiene los elementos plásticos?', respuesta:'si'},
-        {id:4, pregunta:'¿Los elementos plásticos están en buen estado?', respuesta:'si'}, 
+const CompleteCheckList2 = ({ estadoDeAccesorios }) => {
+  estadoDeAccesorios.pop();
+  const listOfQuestions = estadoDeAccesorios;
 
-       ];
+  return (
+    <div>
+      <ol>
+        {listOfQuestions.map((condition) => {
+          return (
+            <CompleteCheckListItem key={condition.id} condition={condition} />
+          );
+        })}
+      </ol>
+      <div className="continueBtnDiv">
+        <Link to="/checklist3">
+          <button className="continueBtn">CONTINUAR</button>
+        </Link>
+      </div>
+    </div>
+  );
+};
 
-    return (
-        <div>
-
-<ol>          {
-                estadoDelArnesAux.map((condition) => {
-                    return(
-                          <AccessoriesCondition
-                           key={condition.id}
-                           condition={condition}
-                           additionOfAccessoriesConditions={additionOfAccessoriesConditions}
-                           accessoriesCondition={accessoriesCondition}
-                            />
-                    )
-                    }
-                    )
-                    
-                }
-            </ol>
-            <div className="continueBtnDiv">
-            <Link to='/checklist3'><button className= "continueBtn">CONTINUAR</button></Link>
-            </div>
-        </div>
-    )
-}
-
-export default CompleteCheckList2
+export default CompleteCheckList2;

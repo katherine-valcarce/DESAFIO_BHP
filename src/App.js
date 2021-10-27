@@ -121,7 +121,12 @@ return (
         setPosition={setPosition} />
       </Route>
       <Route path="/menu">
-        <Menu setArnesCondition={setArnesCondition}/>
+        <Menu 
+        setArnesCondition={setArnesCondition}
+        setAccessoriesCondition={setAccessoriesCondition}
+        setLifeRopeCondition={setLifeRopeCondition}
+        setAnchorPointCondition={setAnchorPointCondition}
+        />
       </Route>
       <Route path="/verification">
         <AnchorPointVerification/>

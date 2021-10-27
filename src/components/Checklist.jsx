@@ -37,8 +37,7 @@ const CheckList = ({arnesCondition, additionOfArnesConditions}) => {
                     )
                     :
                 <CompleteCheckList
-                arnesCondition={arnesCondition}
-                additionOfArnesConditions={additionOfArnesConditions}
+                estadoDelArnes={estadoDelArnes}
                 />
                 }
             </ol>
