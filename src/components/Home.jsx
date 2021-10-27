@@ -8,7 +8,7 @@ const Home = () => {
         <div className="containerDiv">
             <img className= "logo" src={logo} alt="logo"/> 
             <div className = "bodyContainer">
-            <h1 className='titleHome'>Guía de cumplimiento de Estándar Detención de Caídas</h1>
+            <h1 className='titleHome'>Estándar de Detención de Caídas</h1>
             <img src={warning} alt='warning'></img> <br/>
             <Link to="/identification"><button className=" btn btn-primary">
             INGRESAR</button></Link>

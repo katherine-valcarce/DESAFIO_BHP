@@ -68,8 +68,8 @@ const Doc = ({user, rut,informationELC, space, height, estrobo, onChangeinformat
       <h5 className="titleDoc2">CALCULO DE ESPACIO LIBRE DE CAÍDA</h5>
       <div className="result">
         <div>
-          <h2 className="textpdf"> Longitud de Estrobo (LE) = {estrobo} m </h2>
-          <h2 className="textpdf">  Elongación del Amortiguador de Impacto(EA) = 1.2 m</h2>
+          <h2 className="textpdf">Longitud de Estrobo (LE) = {estrobo} m </h2>
+          <h2 className="textpdf">Elongación del Amortiguador de Impacto(EA) = 1.2 m</h2>
           <h2 className="textpdf">Estatura del Trabajador (ET)= {height} m</h2>
           <h2 className="textpdf">Márgen de Seguridad(MS) = 1 m</h2> <br />
  
