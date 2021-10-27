@@ -8,8 +8,7 @@ import Draw from "../asset/grafic.png";
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
  
-const Doc = (props) => {
-  const { user, position } = props;
+const Doc = ({user, rut, setUser, setRut}) => {
  
   const printDocument = () => {
     const input = document.getElementById("divToPrint");
@@ -20,7 +19,30 @@ const Doc = (props) => {
       pdf.save("download.pdf");
     });
   };
- 
+ // ------Funcion decha y hora -----
+ function date() {
+  function addZero(i) {
+    if (i < 10) {
+      // eslint-disable-next-line no-param-reassign
+      i = `0${i}`;
+    }
+    return i;
+  }
+  const hoy = new Date();
+  let second = hoy.getSeconds();
+  let hour = hoy.getHours();
+  let minute = hoy.getMinutes();
+  let dd = hoy.getDate();
+  let mm = hoy.getMonth() + 1;
+  const yyyy = hoy.getFullYear();
+
+  second = addZero(second);
+  hour = addZero(hour);
+  minute = addZero(minute);
+  dd = addZero(dd);
+  mm = addZero(mm);
+  return `${dd}/${mm}/${yyyy}   ${hour}:${minute}:${second} hrs`;
+}
   return (
     <>
     <div id="divToPrint">
@@ -31,8 +53,8 @@ const Doc = (props) => {
        ESTÁNDAR DE DETENCIÓN DE CAIDAS
       </h1>
       <h2 className="textDoc"> Nombre de usuario : {user} </h2>
-      <h2 className="textDoc"> Rut: {position} </h2>
-      <h2 className="textDoc"> Fecha y hora de emisión : </h2>
+      <h2 className="textDoc"> Rut: {rut} </h2>
+      <h2 className="textDoc"> Fecha y hora de emisión : {date()} </h2>
       <hr />
       <h5 className="titleDoc2">
         CHECKLIST ARNÉS DE SEGURIDAD Y PUNTOS DE ANCLAJE
@@ -67,7 +89,7 @@ const Doc = (props) => {
         <hr width="120" size="5" />
         <h1 className="textDoc">Firma y Timbre </h1>
         <h1> {user} </h1>
-        <h1> {position} </h1>
+        <h1> {rut} </h1>
       </div>
     </div>
     <div className="containerBtn">
