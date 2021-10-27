@@ -34,8 +34,7 @@ const CheckList2 = ({accessoriesCondition, additionOfAccessoriesConditions}) => 
                     )
                     :
                 <CompleteCheckList2
-                accessoriesCondition={accessoriesCondition}
-                additionOfAccessoriesConditions={additionOfAccessoriesConditions}
+                estadoDeAccesorios={estadoDeAccesorios}
                 />
                 }
             </ol>
