@@ -24,12 +24,23 @@
   width: 25vh;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25), 0 4px 11px 8px rgba(0, 0, 0, 0) !important;
 }
+
+
 .btn-primary:hover {
   color: #fff;
   background-color: hsl(11deg 100% 62%);
   border-color: hsl(11deg 100% 62%);
 }
 
+.btn-clicked{
+    background: #DD5900;
+    color:#FFFFFF;
+}
+
+.btn-clicked:hover{
+    background: #DD5900;
+    color:#FFFFFF;
+}
 /* ________home_____ */
 .containerDiv {
   display: flex;

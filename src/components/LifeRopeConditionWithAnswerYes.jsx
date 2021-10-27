@@ -3,6 +3,10 @@ import {Link} from "react-router-dom";
 import Remove from "../asset/remove.png";
 
 const LifeRopeConditionWithAnswerYes = ({condition,additionOfLifeRopeConditions, estadoDeCuerdaDeVida }) => {
+  const actionDisplayAndColorChange = () => {
+    additionOfLifeRopeConditions(condition.id,estadoDeCuerdaDeVida)
+     document.getElementById(`${condition.id}`).classList.toggle('btn-clicked');
+     }
     return (
         <div>
             <div className="container">
@@ -10,8 +14,9 @@ const LifeRopeConditionWithAnswerYes = ({condition,additionOfLifeRopeConditions,
             <div className="col">
               {/*  Modal centrado de forma vertical */}
               <button
+              id={condition.id}
                 className="btn btn-primary"
-                onClick={() => additionOfLifeRopeConditions(condition.id, estadoDeCuerdaDeVida)}
+                onClick={() => actionDisplayAndColorChange()}
               >
                 SI
               </button>

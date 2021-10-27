@@ -8,6 +8,10 @@ const AnchorPointConditionWithAnswerYes = ({
   estadoDelPuntoDeAnclaje,
   additionOfAnchorPointConditions,
 }) => {
+  const actionDisplayAndColorChange = () => {
+    additionOfAnchorPointConditions(condition.id,estadoDelPuntoDeAnclaje)
+     document.getElementById(`${condition.id}`).classList.toggle('btn-clicked');
+     }
   return (
     <div>
       <div className="container">
@@ -15,12 +19,9 @@ const AnchorPointConditionWithAnswerYes = ({
           <div className="col">
             {/*  Modal centrado de forma vertical */}
             <button
+              id={condition.id}
               className="btn btn-primary"
-              onClick={() =>
-                additionOfAnchorPointConditions(
-                  condition.id,
-                  estadoDelPuntoDeAnclaje
-                )
+              onClick={() => actionDisplayAndColorChange()
               }
             >
               SI

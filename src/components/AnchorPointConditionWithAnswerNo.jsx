@@ -3,6 +3,10 @@ import {Link} from "react-router-dom"
 import Remove from "../asset/remove.png";
 
 const AnchorPointConditionWithAnswerNo = ({condition,additionOfAnchorPointConditions,estadoDelPuntoDeAnclaje}) => {
+  const actionDisplayAndColorChange = () => {
+    additionOfAnchorPointConditions(condition.id,estadoDelPuntoDeAnclaje)
+     document.getElementById(`${condition.id}`).classList.toggle('btn-clicked');
+     }
     return (
         <div>
               <div className="container">
@@ -63,8 +67,9 @@ const AnchorPointConditionWithAnswerNo = ({condition,additionOfAnchorPointCondit
                 </div>
               </div>
                <button
+                id={condition.id}
                 className="btn btn-primary"
-                onClick={() => additionOfAnchorPointConditions(condition.id, estadoDelPuntoDeAnclaje)}
+                onClick={() => actionDisplayAndColorChange()}
               >
                 NO
               </button>
