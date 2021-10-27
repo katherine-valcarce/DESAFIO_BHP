@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Home from "./components/Home";
 import Menu from "./components/Menu";
 import Doc from "./components/Doc";
@@ -18,7 +18,10 @@ import './App.css';
 const App = () => {
 /* ---------------------información de usuario--------------------------------------- */
 const [user, setUser] = useState('');
+console.log(user)
 const [rut, setRut] = useState('');
+console.log(rut)
+
 
 /* ---------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------- */
@@ -119,7 +122,8 @@ return (
         user={user}
         setUser={setUser}
         rut={rut}
-        setRut={setRut} />
+        setRut={setRut} 
+        />
       </Route>
       <Route path="/menu">
         <Menu setArnesCondition={setArnesCondition}/>
@@ -175,7 +179,7 @@ return (
         onChangeinformationELC={onChangeinformationELC}
         checklist={checklist}
         setChecklist={setChecklist}
-        
+        user={user}
         />
       </Route>
       <Route path="/doc">
