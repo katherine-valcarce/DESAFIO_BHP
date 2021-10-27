@@ -2,6 +2,10 @@ import React from 'react'
 import {Link} from "react-router-dom"
 
 const LifeRopeConditionWithAnswerNo = ({condition,additionOfLifeRopeConditions, estadoDeCuerdaDeVida}) => {
+  const actionDisplayAndColorChange = () => {
+    additionOfLifeRopeConditions(condition.id,estadoDeCuerdaDeVida)
+     document.getElementById(`${condition.id}`).classList.toggle('btn-clicked');
+     }
     return (
         <div>
               <div className="container">
@@ -68,8 +72,9 @@ const LifeRopeConditionWithAnswerNo = ({condition,additionOfLifeRopeConditions, 
                 </div>
               </div>
                <button
+               id={condition.id}
                 className="btn btn-primary"
-                onClick={() => additionOfLifeRopeConditions(condition.id, estadoDeCuerdaDeVida)}
+                onClick={() => actionDisplayAndColorChange()}
               >
                 NO
               </button>

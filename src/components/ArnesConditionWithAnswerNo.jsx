@@ -2,6 +2,12 @@ import React from 'react'
 import {Link} from "react-router-dom"
 
 const ArnesConditionWithAnswerNo = ({condition,additionOfArnesConditions,estadoDelArnes}) => {
+
+  const actionDisplayAndColorChange = () => {
+    additionOfArnesConditions(condition.id,estadoDelArnes)
+     document.getElementById(`${condition.id}`).classList.toggle('btn-clicked');
+     }
+
     return (
         <div>
               <div className="container">
@@ -68,8 +74,9 @@ const ArnesConditionWithAnswerNo = ({condition,additionOfArnesConditions,estadoD
                 </div>
               </div>
                <button
+               id={condition.id}
                 className="btn btn-primary"
-                onClick={() => additionOfArnesConditions(condition.id, estadoDelArnes)}
+                onClick={() => actionDisplayAndColorChange()}
               >
                 NO
               </button>

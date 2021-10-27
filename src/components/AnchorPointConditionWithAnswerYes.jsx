@@ -1,6 +1,10 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 const AnchorPointConditionWithAnswerYes = ({condition,estadoDelPuntoDeAnclaje,additionOfAnchorPointConditions }) => {
+  const actionDisplayAndColorChange = () => {
+    additionOfAnchorPointConditions(condition.id,estadoDelPuntoDeAnclaje)
+     document.getElementById(`${condition.id}`).classList.toggle('btn-clicked');
+     }
     return (
         <div>
             <div className="container">
@@ -8,8 +12,9 @@ const AnchorPointConditionWithAnswerYes = ({condition,estadoDelPuntoDeAnclaje,ad
             <div className="col">
               {/*  Modal centrado de forma vertical */}
               <button
+                id={condition.id}
                 className="btn btn-primary"
-                onClick={() => additionOfAnchorPointConditions(condition.id, estadoDelPuntoDeAnclaje)}
+                onClick={() => actionDisplayAndColorChange()}
               >
                 SI
               </button>
