@@ -86,10 +86,9 @@ const Doc = ({user, rut,informationELC, space, height, estrobo, onChangeinformat
         al estándar
       </h5>
       <div className="containerBtn">
-        <hr width="120" size="5" />
-        <h1 className="textDoc">Firma y Timbre </h1>
-        <h1> {user} </h1>
-        <h1> {rut} </h1>
+        <hr width="135" size="5" />
+        <h5 className="titleDoc2"> {user} </h5>
+        <h5 className="titleDoc2"> {rut} </h5>
       </div>
     </div>
     <div className="containerBtn">
