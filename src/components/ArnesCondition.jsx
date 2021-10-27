@@ -6,7 +6,7 @@ const ArnesCondition = ({condition, additionOfArnesConditions, estadoDelArnes}) 
     
 
   return (
-    <div>
+    <div className= "btnAnswer">
       <li>
         {condition.pregunta}
         {condition.respuesta ==='si' ?

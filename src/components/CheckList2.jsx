@@ -1,6 +1,7 @@
 import React from 'react'
 import CompleteCheckList2 from './CompleteCheckList2';
 import AccessoriesCondition from './AccessoriesCondition';
+import logo from "../asset/bhp-logo 2.png"
 
 const CheckList2 = ({accessoriesCondition, additionOfAccessoriesConditions}) => {
     const estadoDeAccesorios = [
@@ -13,11 +14,12 @@ const CheckList2 = ({accessoriesCondition, additionOfAccessoriesConditions}) => 
     
     
     return (
-        <div>
-            <h2>Verifica si el punto de anclaje cuenta con los siguientes requisitos:</h2>
-            <br />
-            <h4>Estado de los accesorios</h4>
-            <br/>
+        <div className="containerDiv">
+            <img className= "logo" src={logo} alt="logo"></img>
+            <div className= "checklistDiv">
+            <h2 className= "h2Verif">VERIFICA SI EL PUNTO DE ANCLAJE CUENTA CON LOS SIGUIENTES REQUISITOS:</h2>
+            <div className="boxDivChecklist">
+            <h2 className= "h2Verif">ESTADO DE LOS ACCESORIOS</h2>
             <ol> { accessoriesCondition.length < 5 ?
                 accessoriesCondition.map((condition) => {
                     return(
@@ -37,6 +39,8 @@ const CheckList2 = ({accessoriesCondition, additionOfAccessoriesConditions}) => 
                 />
                 }
             </ol>
+        </div>
+        </div>
         </div>
     )
 }
