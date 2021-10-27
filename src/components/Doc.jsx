@@ -16,32 +16,30 @@ const Doc = ({user, rut,informationELC, space, height, estrobo, onChangeinformat
       const imgData = canvas.toDataURL("image/png");
       const pdf = new jsPDF();
       pdf.addImage(imgData, "JPEG", 25, 10, 160, 280); //margen izq, margen top, width heigth
-      pdf.save("download.pdf");
+      pdf.save("EstandarDeDetencionDeCaidas_" +date()+".pdf");
     });
   };
  // ------Funcion decha y hora -----
  function date() {
   function addZero(i) {
     if (i < 10) {
-      // eslint-disable-next-line no-param-reassign
       i = `0${i}`;
     }
     return i;
   }
   const hoy = new Date();
-  let second = hoy.getSeconds();
   let hour = hoy.getHours();
   let minute = hoy.getMinutes();
   let dd = hoy.getDate();
   let mm = hoy.getMonth() + 1;
   const yyyy = hoy.getFullYear();
 
-  second = addZero(second);
+
   hour = addZero(hour);
   minute = addZero(minute);
   dd = addZero(dd);
   mm = addZero(mm);
-  return `${dd}/${mm}/${yyyy}   ${hour}:${minute}:${second} hrs`;
+  return `${dd}/${mm}/${yyyy}   ${hour}:${minute} hrs`;
 }
   return (
     <>
