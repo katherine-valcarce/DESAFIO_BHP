@@ -20,7 +20,30 @@ const Doc = (props) => {
       pdf.save("download.pdf");
     });
   };
- 
+ // ------Funcion decha y hora -----
+ function date() {
+  function addZero(i) {
+    if (i < 10) {
+      // eslint-disable-next-line no-param-reassign
+      i = `0${i}`;
+    }
+    return i;
+  }
+  const hoy = new Date();
+  let second = hoy.getSeconds();
+  let hour = hoy.getHours();
+  let minute = hoy.getMinutes();
+  let dd = hoy.getDate();
+  let mm = hoy.getMonth() + 1;
+  const yyyy = hoy.getFullYear();
+
+  second = addZero(second);
+  hour = addZero(hour);
+  minute = addZero(minute);
+  dd = addZero(dd);
+  mm = addZero(mm);
+  return `${dd}/${mm}/${yyyy}   ${hour}:${minute}:${second} hrs`;
+}
   return (
     <>
     <div id="divToPrint">
@@ -32,7 +55,7 @@ const Doc = (props) => {
       </h1>
       <h2 className="textDoc"> Nombre de usuario : {user} </h2>
       <h2 className="textDoc"> Rut: {position} </h2>
-      <h2 className="textDoc"> Fecha y hora de emisión : </h2>
+      <h2 className="textDoc"> Fecha y hora de emisión : {date()} </h2>
       <hr />
       <h5 className="titleDoc2">
         CHECKLIST ARNÉS DE SEGURIDAD Y PUNTOS DE ANCLAJE
