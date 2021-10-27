@@ -3,7 +3,9 @@ import casco from "../asset/casco.png"
 import logo from "../asset/bhp-logo 2.png"
 
 const identification = (props) => {
-    const { user, setUser, position, setPosition } = props;
+    const { user, setUser, rut, setRut } = props;
+
+    // Funcion para el ingreso de rut
 
     return (
         <div className="containerDiv">
@@ -27,10 +29,11 @@ const identification = (props) => {
                         <input
                             className="IdPositionInput"
                             type="text"
-                            name="position"
-                            id="position"
-                            value={position}
-                            onChange={(e) => setPosition(e.target.value)}
+                            name="rut"
+                            id="rut"
+                            value={rut}
+                            maxlength="12" max="12"
+                            onChange={(e) => setRut(e.target.value)}
                             placeholder='Rut'
                             required
                         />

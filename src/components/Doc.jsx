@@ -8,8 +8,7 @@ import Draw from "../asset/grafic.png";
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
  
-const Doc = (props) => {
-  const { user, position } = props;
+const Doc = ({user, rut, setUser, setRut}) => {
  
   const printDocument = () => {
     const input = document.getElementById("divToPrint");
@@ -54,7 +53,7 @@ const Doc = (props) => {
         Validación Guía de Cumplimiento de Estándar SDDC
       </h1>
       <h2 className="textDoc"> Nombre de usuario : {user} </h2>
-      <h2 className="textDoc"> Rut: {position} </h2>
+      <h2 className="textDoc"> Rut: {rut} </h2>
       <h2 className="textDoc"> Fecha y hora de emisión : {date()} </h2>
       <hr />
       <h5 className="titleDoc2">
@@ -90,7 +89,7 @@ const Doc = (props) => {
         <hr width="120" size="5" />
         <h1 className="textDoc">Firma y Timbre </h1>
         <h1> {user} </h1>
-        <h1> {position} </h1>
+        <h1> {rut} </h1>
       </div>
     </div>
     <div className="containerBtn">

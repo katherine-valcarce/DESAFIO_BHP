@@ -18,7 +18,8 @@ import './App.css';
 const App = () => {
 /* ---------------------información de usuario--------------------------------------- */
 const [user, setUser] = useState('');
-const [position, setPosition] = useState('');
+const [rut, setRut] = useState('');
+
 /* ---------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------- */
   
@@ -117,8 +118,8 @@ return (
         <Identification
         user={user}
         setUser={setUser}
-        position={position}
-        setPosition={setPosition} />
+        rut={rut}
+        setRut={setRut} />
       </Route>
       <Route path="/menu">
         <Menu setArnesCondition={setArnesCondition}/>
@@ -180,7 +181,9 @@ return (
       <Route path="/doc">
         <Doc 
         user={user}
-        position={position}
+        setUser={setUser}
+        rut={rut}
+        setRut={setRut}
         />
       </Route>
     </Switch>

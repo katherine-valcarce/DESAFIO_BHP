@@ -26,6 +26,7 @@ const CheckList = ({arnesCondition, additionOfArnesConditions}) => {
             <ol> { arnesCondition.length < 8 ?
                 arnesCondition.map((condition) => {
                     return(
+                        
                           <ArnesCondition
                            key={condition.id}
                            condition={condition}
