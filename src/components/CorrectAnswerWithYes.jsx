@@ -2,18 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Remove from "../asset/remove.png";
 
+const CorrectAnswerWithYes = ({condition, state, addingQuestions, data}) => {
+  
+    const actionDisplayAndColorChange = () => {
+        addingQuestions(condition.id,data,state)
+         document.getElementById(`${condition.id}`).classList.toggle('btn-clicked');
+         }
 
-const AnchorPointConditionWithAnswerYes = ({
-  condition,
-  estadoDelPuntoDeAnclaje,
-  additionOfAnchorPointConditions,
-}) => {
-  const actionDisplayAndColorChange = () => {
-    additionOfAnchorPointConditions(condition.id,estadoDelPuntoDeAnclaje)
-     document.getElementById(`${condition.id}`).classList.toggle('btn-clicked');
-     }
-  return (
-    <div>
+    return (
+        <div>
       <div className="container">
         <div className="row">
           <div className="col">
@@ -21,20 +18,19 @@ const AnchorPointConditionWithAnswerYes = ({
             <button
               id={condition.id}
               className="btn btn-primary"
-              onClick={() => actionDisplayAndColorChange()
-              }
+              onClick={() =>actionDisplayAndColorChange()}
             >
               SI
             </button>
             <button
-              className="btn btn-primary "
+              className="btn btn-primary"
               data-bs-toggle="modal"
               data-bs-target="#mi-modal-2"
             >
               NO
             </button>
             <div
-              class="modal fade"
+              className="modal fade"
               id="mi-modal-2"
               tabindex="-1"
               aria-hidden="true"
@@ -67,7 +63,7 @@ const AnchorPointConditionWithAnswerYes = ({
                     <b className="textModal">
                       NO CUMPLE CON LOS ESTÁNDARES DE SEGURIDAD.
                     </b>
-                    <br />
+                    <br/>
                     <p className="textModal">
                       <u>Contacte con supervisor de faena </u> y revise
                       nuevamente la seguridad de su equipamiento.
@@ -82,5 +78,6 @@ const AnchorPointConditionWithAnswerYes = ({
       </div>
     </div>
   );
-};
-export default AnchorPointConditionWithAnswerYes;
+}
+
+export default CorrectAnswerWithYes

@@ -1,9 +1,10 @@
 import React from 'react'
-import CompleteCheckList2 from './CompleteCheckList2';
-import AccessoriesCondition from './AccessoriesCondition';
+import CompleteCheckList from './CompleteCheckList';
+import KindOfAnswer from './KindOfAnswer';
+import { Link } from "react-router-dom";
 import logo from "../asset/bhp-logo 2.png"
 
-const CheckList2 = ({accessoriesCondition, additionOfAccessoriesConditions}) => {
+const CheckList2 = ({accessoriesCondition, addingQuestions}) => {
     const estadoDeAccesorios = [
         {id:1, pregunta:'¿Los anillos en D presentan deformaciones?', respuesta:'no'},
         {id:2, pregunta:'¿Están las hebillas en buen estado?', respuesta:'si'},
@@ -23,19 +24,27 @@ const CheckList2 = ({accessoriesCondition, additionOfAccessoriesConditions}) => 
             <ol> { accessoriesCondition.length < 5 ?
                 accessoriesCondition.map((condition) => {
                     return(
-                          <AccessoriesCondition
-                           key={condition.id}
-                           condition={condition}
-                           additionOfAccessoriesConditions={additionOfAccessoriesConditions}
-                           estadoDeAccesorios={estadoDeAccesorios}
-                            />
+                        <KindOfAnswer
+                        key={condition.id}
+                        condition={condition}
+                        state={accessoriesCondition}
+                        addingQuestions={addingQuestions}
+                        data={estadoDeAccesorios}
+                         />
                     )
                     }
                     )
                     :
-                <CompleteCheckList2
-                estadoDeAccesorios={estadoDeAccesorios}
-                />
+                <div>
+                    <CompleteCheckList
+                    data={estadoDeAccesorios}
+                    />
+                    <div className="continueBtnDiv">
+                            <Link to="/checklist3">
+                              <button className="continueBtn">CONTINUAR</button>
+                            </Link>
+                          </div>
+                </div>
                 }
             </ol>
         </div>

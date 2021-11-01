@@ -18,9 +18,8 @@ import './App.css';
 const App = () => {
 /* ---------------------información de usuario--------------------------------------- */
 const [user, setUser] = useState('');
-console.log(user)
 const [rut, setRut] = useState('');
-console.log(rut)
+
 
 
 /* ---------------------------------------------------------------------------------- */
@@ -34,34 +33,24 @@ console.log(rut)
   const [checklist, setChecklist] = useState(false);  
 
 /*---------Funciónes que agregan las condiciones de validación de punto de anclaje---------------- */
- const  additionOfArnesConditions = (id, data) => {
-  const copyOfArnesConditions = [...arnesCondition];
 
-  if(copyOfArnesConditions.filter((item)=>{return item.id === id+1}).length>0){
-       return;
-  }else if( id === data.length){
-    setArnesCondition(copyOfArnesConditions);
-  }else{
-    copyOfArnesConditions.push(data[id]);
-    setArnesCondition(copyOfArnesConditions);
-      
-      }
- }
 
- const  additionOfAnchorPointConditions = (id, data) => {
-  const copyOfAnchorPointConditions = [...anchorPointCondition];
-  if(copyOfAnchorPointConditions.filter((item)=>{return item.id === id+1}).length>0){
-       return;
-  }else if( id === data.length){
-    setAnchorPointCondition(copyOfAnchorPointConditions);
-  }else{
-    copyOfAnchorPointConditions.push(data[id]);
-    setAnchorPointCondition(copyOfAnchorPointConditions);
-      }
- }
+const  addingQuestions = (id, data, state) => {
 
- const  additionOfAccessoriesConditions = (id, data) => {
-  const copyOfAccessoriesConditions = [...accessoriesCondition];
+  switch (state) {
+    case arnesCondition:
+      const copyOfArnesConditions = [...arnesCondition];
+      if(copyOfArnesConditions.filter((item)=>{return item.id === id+1}).length>0){
+        return;
+     }else if( id === data.length){
+      setArnesCondition(copyOfArnesConditions);
+     }else{
+     copyOfArnesConditions.push(data[id]);
+     setArnesCondition(copyOfArnesConditions);
+     }
+      break;
+      case accessoriesCondition:
+        const copyOfAccessoriesConditions = [...accessoriesCondition];
 
   if(copyOfAccessoriesConditions.filter((item)=>{return item.id === id+1}).length>0){
        return;
@@ -72,10 +61,9 @@ console.log(rut)
     setAccessoriesCondition(copyOfAccessoriesConditions);
       
       }
- }
-
- const  additionOfLifeRopeConditions = (id, data) => {
-  const copyOfLifeRopeConditions = [...lifeRopeCondition];
+      break;
+      case lifeRopeCondition:
+        const copyOfLifeRopeConditions = [...lifeRopeCondition];
 
   if(copyOfLifeRopeConditions.filter((item)=>{return item.id === id+1}).length>0){
        return;
@@ -86,7 +74,28 @@ console.log(rut)
     setLifeRopeCondition(copyOfLifeRopeConditions);
       
       }
+    break;
+    case anchorPointCondition:
+      const copyOfAnchorPointConditions = [...anchorPointCondition];
+  if(copyOfAnchorPointConditions.filter((item)=>{return item.id === id+1}).length>0){
+       return;
+  }else if( id === data.length){
+    setAnchorPointCondition(copyOfAnchorPointConditions);
+  }else{
+    copyOfAnchorPointConditions.push(data[id]);
+    setAnchorPointCondition(copyOfAnchorPointConditions);
+      }
+    break;
+    default:
+    break;
+  }
  }
+
+
+
+ 
+
+ 
  
 /* ------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------ */
@@ -151,25 +160,25 @@ return (
         <CheckList 
         arnesCondition={arnesCondition}
         setArnesCondition={setArnesCondition}
-        additionOfArnesConditions={additionOfArnesConditions}
+        addingQuestions={addingQuestions}
         />
       </Route>
       <Route path="/checklist2">
         <CheckList2
         accessoriesCondition={accessoriesCondition}
         setAccessoriesCondition={setAccessoriesCondition}
-        additionOfAccessoriesConditions={additionOfAccessoriesConditions}/>
+        addingQuestions={addingQuestions}/>
       </Route>
       <Route path="/checklist3">
         <CheckList3
         lifeRopeCondition={lifeRopeCondition}
         setLifeRopeCondition={setLifeRopeCondition}
-        additionOfLifeRopeConditions={additionOfLifeRopeConditions}
+        addingQuestions={addingQuestions}
         />
       </Route>
       <Route path="/checklist4">
         <CheckList4
-        additionOfAnchorPointConditions={additionOfAnchorPointConditions}
+        addingQuestions={addingQuestions}
         anchorPointCondition={anchorPointCondition}
         setAnchorPointCondition={setAnchorPointCondition}
         setChecklist={setChecklist}

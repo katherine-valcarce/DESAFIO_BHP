@@ -22,17 +22,21 @@
   font-weight: bolder;
   font-size: 18px;
   width: 25vh;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25), 0 4px 11px 8px rgba(0, 0, 0, 0) !important;
+  box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 50%), 0 4px 11px 8px rgba(0, 0, 0, 0) !important;
+  
 }
 
 
 .btn-primary:hover {
-  color: #fff;
-  background-color: hsl(11deg 100% 62%);
-  border-color: hsl(11deg 100% 62%);
+  
+ /*  background-color: hsl(11deg 100% 62%);
+  border-color: hsl(11deg 100% 62%); */
+  background: #DD5900;
+  border-color:#DD5900;
+  color:#fff;
 }
 
-.btn-secondary,.btn-clicked{
+.btn-clicked{
     background: #DD5900;
     color:#FFFFFF;
 }
@@ -51,12 +55,30 @@
   font-weight: bolder;
   font-size: 18px;
   width: 25vh;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25), 0 4px 11px 8px rgba(0, 0, 0, 0) !important;
+
+  transition: all ease 100ms;
 }
 
 .btn-secondary:hover{
     background: #DD5900;
     color:#FFFFFF;
+}
+
+
+.btn-primary:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+
+
+/* .btn-secondary:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+} */
+
+.btn-clicked:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 }
 /* ________home_____ */
 .containerDiv {
@@ -378,8 +400,15 @@ h2 {
   font-size: 18px;
   width: 25vh;
   height: 7vh;
-  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 25%), 0 4px 11px 8px rgb(0 0 0 / 0%) !important;
+  box-shadow: 0 4px 3px 0 rgb(0 0 0 / 50%), 0 4px 11px 8px rgb(0 0 0 / 0%)
 }
+.continueBtn:active{
+transform: translateY(4px);
+box-shadow: 0 0 0 0 rgb(0 0 0 / 0%), 0 4px 11px 8px rgb(0 0 0 / 0%)
+
+}
+
+
 .continueBtnDiv {
   display: flex;
   align-items: center;

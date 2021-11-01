@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 /* import ArnesCondition from './ArnesCondition'; */
 import CompleteCheckListItem from "./CompleteCheckListItem";
 
-const CompleteCheckList = ({estadoDelArnes}) => {
-  estadoDelArnes.pop();
-  const listOfQuestions = estadoDelArnes;
+const CompleteCheckList = ({data}) => {
+  data.pop();
+  const listOfQuestions = data;
  
   return (
     <div>
@@ -19,11 +19,7 @@ const CompleteCheckList = ({estadoDelArnes}) => {
           );
         })}
       </ol>
-      <div className="continueBtnDiv">
-        <Link to="/checklist2">
-          <button className="continueBtn">CONTINUAR</button>
-        </Link>
-      </div>
+      
     </div>
   );
 };
