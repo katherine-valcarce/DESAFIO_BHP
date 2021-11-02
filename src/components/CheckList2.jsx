@@ -12,8 +12,6 @@ const CheckList2 = ({accessoriesCondition, addingQuestions}) => {
         {id:4, pregunta:'¿Los elementos plásticos están en buen estado?', respuesta:'si'}, 
         {}
        ];
-    
-    
     return (
         <div className="containerDiv">
             <img className= "logo" src={logo} alt="logo"></img>
@@ -22,20 +20,20 @@ const CheckList2 = ({accessoriesCondition, addingQuestions}) => {
             <div className="boxDivChecklist">
             <h2 className= "h2Verif">ESTADO DE LOS ACCESORIOS</h2>
             <ol> { accessoriesCondition.length < 5 ?
-                accessoriesCondition.map((condition) => {
-                    return(
-                        <KindOfAnswer
-                        key={condition.id}
-                        condition={condition}
-                        state={accessoriesCondition}
-                        addingQuestions={addingQuestions}
-                        data={estadoDeAccesorios}
-                         />
-                    )
-                    }
-                    )
+                   accessoriesCondition.map((condition) => {
+                        return(
+                               <KindOfAnswer
+                                key={condition.id}
+                                condition={condition}
+                                state={accessoriesCondition}
+                                addingQuestions={addingQuestions}
+                                data={estadoDeAccesorios}
+                                 />
+                                 )
+                                 }
+                        )
                     :
-                <div>
+                <>
                     <CompleteCheckList
                     data={estadoDeAccesorios}
                     />
@@ -44,7 +42,7 @@ const CheckList2 = ({accessoriesCondition, addingQuestions}) => {
                               <button className="continueBtn">CONTINUAR</button>
                             </Link>
                           </div>
-                </div>
+                </>
                 }
             </ol>
         </div>

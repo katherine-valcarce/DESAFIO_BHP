@@ -46,7 +46,7 @@ const CorrectAnswerWithYes = ({condition, state, addingQuestions, data}) => {
                 <div className="modal-content">
                   {/* Encabezado de la caja */}
                   <div className="closedTag">
-                    <Link to="/menu">
+                    <Link to="/access">
                       <button
                         className="btn-close"
                         data-bs-dismiss="modal"
