@@ -1,6 +1,6 @@
 # Estándar de Detención de Caídas
 
-Proyecto planteado como desafío en el primer Talent Fest en Chile por Laboratoria, aplicación creada en seis días como solución a problema planteado por la compañía minera BHP. 
+Proyecto propuesto como desafío en el primer Talent Fest en Chile por Laboratoria, aplicación creada en seis días como solución a problema planteado por la compañía minera BHP. 
 
 ## Enlace
 
