@@ -15,48 +15,62 @@
 .btn-primary {
   font-family: "Roboto";
   color: #dd5900;
-  background: #ffffff;
+  background: #fff;
   border: 3px solid #dd5900;
   border-radius: 5px;
   font-style: normal;
   font-weight: bolder;
   font-size: 18px;
   width: 25vh;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25), 0 4px 11px 8px rgba(0, 0, 0, 0) !important;
+  box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 50%), 0 4px 11px 8px rgba(0, 0, 0, 0) !important;
+  
 }
 
 
 .btn-primary:hover {
-  color: #fff;
-  background-color: hsl(11deg 100% 62%);
-  border-color: hsl(11deg 100% 62%);
+ 
+  background: #DD5900;
+  border-color:#DD5900;
+  color:#fff;
 }
 
-.btn-secondary,.btn-clicked{
-    background: #DD5900;
-    color:#FFFFFF;
-}
 
 .btn-clicked:hover{
     background: #DD5900;
-    color:#FFFFFF;
+    border-color:#DD5900;
+    color:#fff;
 }
 
-.btn-secondary{
+.btn-secondary, .btn-clicked{
     font-family: "Roboto";
     background: #DD5900;
-    color:#FFFFFF;
-    border-radius: 5px;
+    color:#fff;
+    border: 3px solid #dd5900;
+   border-radius: 5px;
   font-style: normal;
   font-weight: bolder;
   font-size: 18px;
   width: 25vh;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25), 0 4px 11px 8px rgba(0, 0, 0, 0) !important;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.5),0 4px 11px 8px transparent!important;
+
+  /* transition: all ease 100ms; */
 }
 
 .btn-secondary:hover{
     background: #DD5900;
-    color:#FFFFFF;
+    border-color:#DD5900;
+    color:#fff;
+}
+
+
+.btn-primary:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.btn-clicked:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 }
 /* ________home_____ */
 .containerDiv {
@@ -371,15 +385,23 @@ h2 {
 .continueBtn {
   font-family: "Roboto";
   color: #dd5900;
-  background: #ffffff;
+  background: #fff;
   border-radius: 5px;
   font-style: normal;
   font-weight: bolder;
   font-size: 18px;
   width: 25vh;
   height: 7vh;
-  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 25%), 0 4px 11px 8px rgb(0 0 0 / 0%) !important;
+  box-shadow: 0 4px 3px 0 rgb(0 0 0 / 50%), 0 4px 11px 8px rgb(0 0 0 / 0%)
 }
+
+.continueBtn:active{
+transform: translateY(4px);
+box-shadow: 0 0 0 0 rgb(0 0 0 / 0%), 0 4px 11px 8px rgb(0 0 0 / 0%)
+
+}
+
+
 .continueBtnDiv {
   display: flex;
   align-items: center;

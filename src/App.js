@@ -1,9 +1,7 @@
 import React, {useState} from 'react'
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Home from "./components/Home";
-import Menu from "./components/Menu";
-import Doc from "./components/Doc";
-import Identification from "./components/Identification";
+import Access from './components/Access';
 import Calculator from "./components/Calculator";
 import AnchorPointVerification from './components/AnchorPointVerification';
 import CheckList from "./components/CheckList";
@@ -11,16 +9,19 @@ import CheckList2 from './components/CheckList2';
 import CheckList3 from './components/CheckList3';
 import CheckList4 from './components/CheckList4';
 import Results from './components/Results';
+import Document from "./components/Document";
 import './App.css';
+
 
 
 
 const App = () => {
 /* ---------------------información de usuario--------------------------------------- */
 const [user, setUser] = useState('');
-console.log(user)
 const [rut, setRut] = useState('');
-console.log(rut)
+const [terms, setTerms] = useState(false);
+const [fieldValidation, setFieldValidation] = useState(false);
+
 
 
 /* ---------------------------------------------------------------------------------- */
@@ -34,34 +35,24 @@ console.log(rut)
   const [checklist, setChecklist] = useState(false);  
 
 /*---------Funciónes que agregan las condiciones de validación de punto de anclaje---------------- */
- const  additionOfArnesConditions = (id, data) => {
-  const copyOfArnesConditions = [...arnesCondition];
 
-  if(copyOfArnesConditions.filter((item)=>{return item.id === id+1}).length>0){
-       return;
-  }else if( id === data.length){
-    setArnesCondition(copyOfArnesConditions);
-  }else{
-    copyOfArnesConditions.push(data[id]);
-    setArnesCondition(copyOfArnesConditions);
-      
-      }
- }
 
- const  additionOfAnchorPointConditions = (id, data) => {
-  const copyOfAnchorPointConditions = [...anchorPointCondition];
-  if(copyOfAnchorPointConditions.filter((item)=>{return item.id === id+1}).length>0){
-       return;
-  }else if( id === data.length){
-    setAnchorPointCondition(copyOfAnchorPointConditions);
-  }else{
-    copyOfAnchorPointConditions.push(data[id]);
-    setAnchorPointCondition(copyOfAnchorPointConditions);
-      }
- }
+const  addingQuestions = (id, data, state) => {
 
- const  additionOfAccessoriesConditions = (id, data) => {
-  const copyOfAccessoriesConditions = [...accessoriesCondition];
+  switch (state) {
+    case arnesCondition:
+      const copyOfArnesConditions = [...arnesCondition];
+      if(copyOfArnesConditions.filter((item)=>{return item.id === id+1}).length>0){
+        return;
+     }else if( id === data.length){
+      setArnesCondition(copyOfArnesConditions);
+     }else{
+     copyOfArnesConditions.push(data[id]);
+     setArnesCondition(copyOfArnesConditions);
+     }
+      break;
+      case accessoriesCondition:
+        const copyOfAccessoriesConditions = [...accessoriesCondition];
 
   if(copyOfAccessoriesConditions.filter((item)=>{return item.id === id+1}).length>0){
        return;
@@ -72,10 +63,9 @@ console.log(rut)
     setAccessoriesCondition(copyOfAccessoriesConditions);
       
       }
- }
-
- const  additionOfLifeRopeConditions = (id, data) => {
-  const copyOfLifeRopeConditions = [...lifeRopeCondition];
+      break;
+      case lifeRopeCondition:
+        const copyOfLifeRopeConditions = [...lifeRopeCondition];
 
   if(copyOfLifeRopeConditions.filter((item)=>{return item.id === id+1}).length>0){
        return;
@@ -86,8 +76,24 @@ console.log(rut)
     setLifeRopeCondition(copyOfLifeRopeConditions);
       
       }
+    break;
+    case anchorPointCondition:
+      const copyOfAnchorPointConditions = [...anchorPointCondition];
+  if(copyOfAnchorPointConditions.filter((item)=>{return item.id === id+1}).length>0){
+       return;
+  }else if( id === data.length){
+    setAnchorPointCondition(copyOfAnchorPointConditions);
+  }else{
+    copyOfAnchorPointConditions.push(data[id]);
+    setAnchorPointCondition(copyOfAnchorPointConditions);
+      }
+    break;
+    default:
+    break;
+  }
  }
- 
+
+
 /* ------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------ */
   const [estrobo, setEstrobo] = useState('1.2');
@@ -117,16 +123,16 @@ return (
       <Route path="/" exact={true}>
         <Home/>
       </Route>
-      <Route path="/identification">
-        <Identification
+       <Route path="/access">
+        <Access
         user={user}
         setUser={setUser}
         rut={rut}
         setRut={setRut} 
-        />
-      </Route>
-      <Route path="/menu">
-        <Menu 
+        terms={terms}
+        setTerms={ setTerms}
+        fieldValidation={fieldValidation}
+        setFieldValidation={setFieldValidation}
         setArnesCondition={setArnesCondition}
         setAccessoriesCondition={setAccessoriesCondition}
         setLifeRopeCondition={setLifeRopeCondition}
@@ -151,25 +157,25 @@ return (
         <CheckList 
         arnesCondition={arnesCondition}
         setArnesCondition={setArnesCondition}
-        additionOfArnesConditions={additionOfArnesConditions}
+        addingQuestions={addingQuestions}
         />
       </Route>
       <Route path="/checklist2">
         <CheckList2
         accessoriesCondition={accessoriesCondition}
         setAccessoriesCondition={setAccessoriesCondition}
-        additionOfAccessoriesConditions={additionOfAccessoriesConditions}/>
+        addingQuestions={addingQuestions}/>
       </Route>
       <Route path="/checklist3">
         <CheckList3
         lifeRopeCondition={lifeRopeCondition}
         setLifeRopeCondition={setLifeRopeCondition}
-        additionOfLifeRopeConditions={additionOfLifeRopeConditions}
+        addingQuestions={addingQuestions}
         />
       </Route>
       <Route path="/checklist4">
         <CheckList4
-        additionOfAnchorPointConditions={additionOfAnchorPointConditions}
+        addingQuestions={addingQuestions}
         anchorPointCondition={anchorPointCondition}
         setAnchorPointCondition={setAnchorPointCondition}
         setChecklist={setChecklist}
@@ -187,8 +193,8 @@ return (
         user={user}
         />
       </Route>
-      <Route path="/doc">
-        <Doc 
+      <Route path="/document">
+        <Document 
         onChangeinformationELC={onChangeinformationELC}
         informationELC={informationELC}
         height={height}

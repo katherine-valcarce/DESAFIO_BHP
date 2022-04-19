@@ -8,7 +8,7 @@ import Draw from "../asset/grafic.png";
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
  
-const Doc = ({user, rut,informationELC, space, height, estrobo, onChangeinformationELC}) => {
+const Document = ({user, rut,informationELC, space, height, estrobo, onChangeinformationELC}) => {
  
   const printDocument = () => {
     const input = document.getElementById("divToPrint");
@@ -19,7 +19,7 @@ const Doc = ({user, rut,informationELC, space, height, estrobo, onChangeinformat
       pdf.save("EstandarDeDetencionDeCaidas_" +date()+".pdf");
     });
   };
- // ------Funcion decha y hora -----
+ // ------Funcion fecha y hora -----
  function date() {
   function addZero(i) {
     if (i < 10) {
@@ -65,7 +65,7 @@ const Doc = ({user, rut,informationELC, space, height, estrobo, onChangeinformat
       </div>
  
       <pagebreak />
-      <h5 className="titleDoc2">CALCULO DE ESPACIO LIBRE DE CAÍDA</h5>
+      <h5 className="titleDoc2">CÁLCULO DE ESPACIO LIBRE DE CAÍDA</h5>
       <div className="result">
         <div>
           <h2 className="textpdf">Longitud de Estrobo (LE) = {estrobo} m </h2>
@@ -98,4 +98,4 @@ const Doc = ({user, rut,informationELC, space, height, estrobo, onChangeinformat
       
   );
 };
-export default Doc;
+export default Document;

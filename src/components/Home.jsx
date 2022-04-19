@@ -10,7 +10,7 @@ const Home = () => {
             <div className = "bodyContainer">
             <h1 className='titleHome'>Estándar de Detención de Caídas</h1>
             <img src={warning} alt='warning'></img> <br/>
-            <Link to="/identification"><button className=" btn btn-primary">
+            <Link to="/access"><button className=" btn btn-primary">
             INGRESAR</button></Link>
             </div>
         </div>

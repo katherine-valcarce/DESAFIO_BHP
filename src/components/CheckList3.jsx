@@ -1,9 +1,10 @@
 import React from 'react'
-import CompleteCheckList3 from './CompleteCheckList3';
-import LifeRopeCondition from './LifeRopeCondition';
+import CompleteCheckList from './CompleteCheckList';
+import { Link } from "react-router-dom";
+import KindOfAnswer from './KindOfAnswer';
 import logo from "../asset/bhp-logo 2.png"
 
-const CheckList3 = ({lifeRopeCondition, additionOfLifeRopeConditions}) => {
+const CheckList3 = ({lifeRopeCondition, addingQuestions}) => {
     const estadoDeCuerdaDeVida = [
         {id:1, pregunta:'¿Se encuentran libres de grasa, pintura, etc?', respuesta:'si'},
         {id:2, pregunta:'¿Están los ganchos en buen estado?', respuesta:'si'},
@@ -24,19 +25,27 @@ const CheckList3 = ({lifeRopeCondition, additionOfLifeRopeConditions}) => {
             <ol> { lifeRopeCondition.length < 5 ?
                 lifeRopeCondition.map((condition) => {
                     return(
-                          <LifeRopeCondition
-                           key={condition.id}
-                           condition={condition}
-                           additionOfLifeRopeConditions={additionOfLifeRopeConditions}
-                           estadoDeCuerdaDeVida={estadoDeCuerdaDeVida}
-                            />
+                        <KindOfAnswer
+                        key={condition.id}
+                        condition={condition}
+                        state={lifeRopeCondition}
+                        addingQuestions={addingQuestions}
+                        data={estadoDeCuerdaDeVida}
+                         />
                     )
                     }
                     )
                     :
-                <CompleteCheckList3
-                estadoDeCuerdaDeVida={estadoDeCuerdaDeVida}
-                />
+                    <div>
+                    <CompleteCheckList
+                    data={estadoDeCuerdaDeVida}
+                    />
+                    <div className="continueBtnDiv">
+                            <Link to="/checklist4">
+                              <button className="continueBtn">CONTINUAR</button>
+                            </Link>
+                          </div>
+                </div>
                 }
             </ol>
         </div>
