@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Estándar de Detención de Caídas
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
