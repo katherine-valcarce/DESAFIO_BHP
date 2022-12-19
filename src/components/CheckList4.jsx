@@ -1,8 +1,10 @@
 import React from 'react'
-import AnchorPointCondition from './AnchorPointCondition';
-import CompleteCheckList4 from './CompleteCheckList4';
-import logo from "../asset/bhp-logo 2.png"
-const CheckList4 = ({anchorPointCondition, additionOfAnchorPointConditions, setChecklist}) => {
+import KindOfAnswer from './KindOfAnswer';
+import CompleteCheckList from './CompleteCheckList';
+import { Link } from "react-router-dom";
+import logo from "../asset/bhp-logo 2.png";
+
+const CheckList4 = ({anchorPointCondition, addingQuestions, setChecklist}) => {
     const estadoDelPuntoDeAnclaje = [
         {id:1, pregunta:'¿Se visualiza alguna modificación del Punto de Anclaje?', respuesta:'no'},
         {id:2, pregunta:'¿El Punto de Anclaje a utilizar está identificado de color amarillo?', respuesta:'si'},
@@ -24,20 +26,29 @@ const CheckList4 = ({anchorPointCondition, additionOfAnchorPointConditions, setC
             <ol> { anchorPointCondition.length < 8 ?
                 anchorPointCondition.map((condition) => {
                     return(
-                          <AnchorPointCondition
-                           key={condition.id}
-                           condition={condition}
-                           additionOfAnchorPointConditions={additionOfAnchorPointConditions}
-                           estadoDelPuntoDeAnclaje={estadoDelPuntoDeAnclaje}
-                            />
+                        <KindOfAnswer
+                        key={condition.id}
+                        condition={condition}
+                        state={anchorPointCondition}
+                        addingQuestions={addingQuestions}
+                        data={estadoDelPuntoDeAnclaje}
+                         />
                     )
                     }
                     )
                     :
-                <CompleteCheckList4
-                estadoDelPuntoDeAnclaje={estadoDelPuntoDeAnclaje}
-                setChecklist={setChecklist}
-                />
+                <div>
+                    <CompleteCheckList
+                    data={estadoDelPuntoDeAnclaje}
+                    />
+                    <div className="continueBtnDiv">
+                            <Link to="/results">
+                              <button className="continueBtn" onClick={() => setChecklist(true)}>
+                                FINALIZAR
+                              </button>
+                            </Link>
+                          </div>
+                </div>
                 }
             </ol>
         </div>

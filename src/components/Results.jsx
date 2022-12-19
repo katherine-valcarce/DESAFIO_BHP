@@ -25,7 +25,7 @@ const Results = ({
         <div>
 
             <div className="botonm">
-            <Link to="/doc">
+            <Link to="/document">
               <button className="btn btn-primary">Ver PDF</button>
             </Link>
           </div>

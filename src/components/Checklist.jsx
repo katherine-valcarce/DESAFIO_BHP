@@ -1,9 +1,10 @@
 import React from 'react'
-import ArnesCondition from './ArnesCondition';
+import KindOfAnswer from './KindOfAnswer';
 import CompleteCheckList from './CompleteCheckList';
+import { Link } from "react-router-dom";
 import logo from "../asset/bhp-logo 2.png"
 
-const CheckList = ({arnesCondition, additionOfArnesConditions}) => {
+const CheckList = ({arnesCondition, addingQuestions}) => {
     const estadoDelArnes = [
         {id:1, pregunta:'¿Se encuentra libre grasa, pinturas, etc?', respuesta:'si'},
         {id:2, pregunta:'¿Tiene hebras cortadas o dañadas?', respuesta:'no'},
@@ -27,19 +28,27 @@ const CheckList = ({arnesCondition, additionOfArnesConditions}) => {
                 arnesCondition.map((condition) => {
                     return(
                         
-                          <ArnesCondition
+                          <KindOfAnswer
                            key={condition.id}
                            condition={condition}
-                           additionOfArnesConditions={additionOfArnesConditions}
-                           estadoDelArnes={estadoDelArnes}
+                           state={arnesCondition}
+                           addingQuestions={addingQuestions}
+                           data={estadoDelArnes}
                             />
                     )
                     }
                     )
                     :
-                <CompleteCheckList
-                estadoDelArnes={estadoDelArnes}
-                />
+                <div>
+                    <CompleteCheckList
+                    data={estadoDelArnes}
+                    />
+                    <div className="continueBtnDiv">
+                                <Link to="/checklist2">
+                                  <button className="continueBtn">CONTINUAR</button>
+                                </Link>
+                              </div>
+                </div>
                 }
             </ol>
         </div>

@@ -1,7 +1,6 @@
 import React from 'react'
-import {Link} from "react-router-dom";
 import logo from "../asset/bhp-logo 2.png"
-
+import AnchorPointVerificationWithAnswerNoOrYes from './AnchorPointVerificationWithAnswerNoOrYes';
 const AnchorPointVerification = ({additionOfhArnessConditions}) => {
     return (
         <div className = "containerDiv">
@@ -11,8 +10,9 @@ const AnchorPointVerification = ({additionOfhArnessConditions}) => {
             <div className="boxDiv">
             <h2 className= "h2Verif">¿EXISTE PUNTO DE ANCLAJE VERIFICADO?</h2>
             <div>
-            <Link to='/checklist'><button className= "btn-primary btnPointVerif">Sí</button></Link>
-            <Link to='/menu'><button className= "btn-primary btnPointVerif" >No</button></Link>
+            {/* <Link to='/checklist'><button className= "btn-primary btnPointVerif">SÍ</button></Link> */}
+            {/* <Link to='/access'><button className= "btn-primary btnPointVerif" >NO</button></Link> */}
+            <AnchorPointVerificationWithAnswerNoOrYes/>
             </div>
             </div>
         </div>
