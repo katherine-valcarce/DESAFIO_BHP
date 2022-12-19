@@ -1,70 +1,29 @@
 # Estándar de Detención de Caídas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto propuesto como desafío en el primer _Talent Fest_ organizado por el [Bootcamp de Laboratoria](https://www.laboratoria.la/) - Noviembre 2021. Esta aplicación se desarrolló  en seis días como solución al problema planteado por la compañía minera [BHP](https://es.wikipedia.org/wiki/BHP).
 
-## Available Scripts
+## Enlace
+https://security-bhp.web.app/
 
-In the project directory, you can run:
+## Problema planteado
 
-### `npm start`
+Los mantenedores de las minas deben cumplir con el Estándar de Sistema de Detención de Caídas. Éste, entrega lineamientos para llevar a cabo el cálculo del espacio de libre caída para poder garantizar la seguridad del trabajador. Hasta el momento este proceso se lleva a cabo de forma manual, lo que permite un alto riesgo a cometer errores. El objetivo de este proyecto es automatizar los requerimientos de seguridad y, en caso de cumplirse, el usuario podrá descargar un archivo pdf que deberá enviar, con su firma digital, a las oficinas pertinentes que se encargarán de autorizar su jornada laboral.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Requerimientos para el cálculo del Espacio Libre de Caída.pdf](https://github.com/Hilicarolina/DESAFIO_BHP/files/10263397/Requerimientos.para.el.calculo.del.Espacio.Libre.de.Caida.pdf)
+- [Archivo Pdf de la confirmación de cumplimiento estándares de seguridad.pdf](https://github.com/Hilicarolina/DESAFIO_BHP/files/10263458/Archivo.Pdf.de.la.confirmacion.de.cumplimiento.estandares.de.seguridad.pdf)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Solución
 
-### `npm test`
+Para optimizar el proceso proponemos una Aplicación Web _Mobile first_ que guía a los usuarios para realizar las verificaciones en terreno de los cálculos del Espacio de Libre Caída. Sólo si cumple con el Estándar de seguridad podrá imprimir sus resultados para continuar con el trabajo.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Demo
 
-### `npm run build`
+- A continuación se puede visualizar un video sobre el flujo de la aplicación cuando el mantenedor cuenta con todas las medidas de seguridad:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+https://user-images.githubusercontent.com/14808063/208542936-8bee5beb-8145-4b59-97e9-90ff776c5bb4.mp4
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- En el caso de que el mantenedor no cuente con algún requisito, la aplicación inmediatamente lo devolverá al comienzo y le sugerirá contactarse con su supervisor:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+https://user-images.githubusercontent.com/14808063/208543023-ebdc498e-06c6-48ca-bb14-82a6a7d9d8de.mp4
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
