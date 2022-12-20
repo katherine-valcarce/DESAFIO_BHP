@@ -10,15 +10,17 @@ https://security-bhp.web.app/
 Los mantenedores de las minas deben cumplir con el Estándar de Sistema de Detención de Caídas. Éste, entrega lineamientos para llevar a cabo el cálculo del espacio de libre caída para poder garantizar la seguridad del trabajador. Hasta el momento este proceso se lleva a cabo de forma manual, lo que permite un alto riesgo a cometer errores. El objetivo de este proyecto es automatizar los requerimientos de seguridad y, en caso de cumplirse, el usuario podrá descargar un archivo pdf que deberá enviar, con su firma digital, a las oficinas pertinentes que se encargarán de autorizar su jornada laboral.
 
 - [Requerimientos para el cálculo del Espacio Libre de Caída.pdf](https://github.com/Hilicarolina/DESAFIO_BHP/files/10263397/Requerimientos.para.el.calculo.del.Espacio.Libre.de.Caida.pdf)
-- [Archivo Pdf de la confirmación de cumplimiento estándares de seguridad.pdf](https://github.com/Hilicarolina/DESAFIO_BHP/files/10263458/Archivo.Pdf.de.la.confirmacion.de.cumplimiento.estandares.de.seguridad.pdf)
+
 
 ## Solución
 
 Para optimizar el proceso proponemos una Aplicación Web _Mobile first_ que guía a los usuarios para realizar las verificaciones en terreno de los cálculos del Espacio de Libre Caída. Sólo si cumple con el Estándar de seguridad podrá imprimir sus resultados para continuar con el trabajo.
 
+- [Archivo Pdf de la confirmación de cumplimiento de estándares de seguridad.pdf](https://github.com/Hilicarolina/DESAFIO_BHP/files/10263458/Archivo.Pdf.de.la.confirmacion.de.cumplimiento.estandares.de.seguridad.pdf)
+
 ## Demo
 
-- A continuación se puede visualizar un video sobre el flujo de la aplicación cuando el mantenedor cuenta con todas las medidas de seguridad:
+- A continuación, se puede visualizar un video sobre el flujo de la aplicación cuando el mantenedor cuenta con todas las medidas de seguridad:
 
 https://user-images.githubusercontent.com/14808063/208542936-8bee5beb-8145-4b59-97e9-90ff776c5bb4.mp4
 
