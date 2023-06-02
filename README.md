@@ -28,4 +28,20 @@ https://user-images.githubusercontent.com/14808063/208542936-8bee5beb-8145-4b59-
 
 https://user-images.githubusercontent.com/14808063/208543023-ebdc498e-06c6-48ca-bb14-82a6a7d9d8de.mp4
 
+## Herramientas
+<p align="left> 
+  <a href="" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="bootstrap" width="50"     height="50"/></a>
+ <a href="" target="_blank">            
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="css3" width="50" height="50"/></a>
+ <a href="" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html5" width="50" height="50"/>
+           </a>
+ <a href="" target="_blank">      
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="javascript" width="50" height="50"/></a>
+ <a href="" target="_blank">  
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="react" width="50" height="50"/></a>
+</p>
 
+            
+          
